@@ -1,1 +1,164 @@
-/* You can add global styles to this file, and also import other style files */
+/*Variables*/
+@primary: #4CB9E2;
+@bluedark:#2B8DBF;
+@secondary: #FFD98E;
+@fonte: 'Roboto Condensed', sans-serif;
+header{
+    background: @bluedark;
+    .page-title{
+        display: flex;
+        height: 90px;
+        margin-bottom: 10px;
+        border-bottom: solid 2px #6ff8fd;
+        img{
+            width: 70px;
+        }
+        h2{
+            color: #fff;
+            font-family: @fonte;
+            font-size: 35px; 
+            align-self: center;
+            margin: 15px;
+        }
+    }
+}
+h2{
+    margin: 0;
+    padding: 0;
+    font-family: @fonte;
+    color: #fff;
+    margin: 0 10px;
+}
+body{
+    background: @primary;
+    font-family: @fonte;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.footer{
+    display: flex;
+    justify-content: flex-end;
+    a{
+        margin: 10px;
+        cursor: pointer;
+        img{
+            width: 50px;
+        }
+        &:hover{
+            opacity: .5;
+        }
+    }
+}
+.logo{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 1% 0;
+    img{
+        width: 200px;
+    }
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    div{
+        text-align: center;
+        background: #2B8DBF;
+        padding: 1%;
+        margin: 1%;
+        border-radius: 5px;
+        width: 200px;
+        height: 200px;
+        box-shadow: 1px 1px 1px #00000014;
+        cursor: pointer;
+        h1{
+            color: #fff;
+        }
+        img{
+            width: 60px;
+            height: auto;
+        }
+        &:hover{
+            background: @secondary;
+        }
+    }
+}
+.mat-menu-item{
+    background: @bluedark;
+    color: #fff;
+    img{
+        width: 20px;
+    }
+}
+.mat-icon-button{
+    background: transparent;
+}
+
+.lista-cursos{
+    display: flex;
+    .curso{
+        box-shadow: 1px 1px 1px #00000057;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 20px 0 20px 0;
+        flex: 1;
+        max-width: 320px;
+        min-width: 300px;
+        margin: 10px;
+        &:hover{
+            background: @bluedark;
+            h3{
+                color: #fff;
+            }
+        }
+        .avanco{
+            background: #efefef;
+            font-family: @fonte;
+            
+            div{
+                color: #fff;
+                width: 20%;
+                padding: 0 5px;
+                &.green{
+                    background: #8dd072;
+                }
+            }
+        }
+        h3{
+            color: @bluedark;
+            padding: 0 10px;
+            float: left;
+            margin: 10px;
+        }
+        .nivel{
+            font-family: @fonte;
+            color: @bluedark;
+            img{
+                width: 20px;
+                padding: 0 0 0 10px;
+            }
+        }
+        .rotulo{
+            img{
+                float: left;
+                width: 100%;
+            }
+            
+            .duracao{
+                position: absolute;
+                z-index: 2;
+                background: @bluedark;
+                padding: 5px;
+                font-size: 18px;
+                border-radius: 20px 0 20px 0;
+                font-family: @fonte;
+                font-weight: 800;
+                color: #fff;
+                img{
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
