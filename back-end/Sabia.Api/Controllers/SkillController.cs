@@ -22,7 +22,7 @@ namespace Sabia.Api.Controllers
         [HttpGet]
         public ActionResult<List<Skill>> GetAll()
         {
-            return null;
+            return skillDataAccess.List().ToList();
         }
 
         [HttpGet("{id}", Name = "GetSkill")]
@@ -40,7 +40,7 @@ namespace Sabia.Api.Controllers
         public IActionResult Save([FromBody] Skill item)
         {
             skillDataAccess.Save(item);
-            return CreatedAtRoute("GetTodo", new { id = item.Id }, item);
+            return CreatedAtRoute("GetSkill", new { id = item.Id }, item);
         }
 
         //[HttpGet]

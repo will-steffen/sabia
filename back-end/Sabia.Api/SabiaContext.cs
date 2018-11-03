@@ -27,8 +27,13 @@ namespace Sabia.Api
             optionsBuilder
                     .UseLazyLoadingProxies()
                     .UseMySql(connectionString);
-
         }
 
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<Skill>()
+                .HasIndex(u => u.Name)
+                .IsUnique();
+        }
     }
 }
