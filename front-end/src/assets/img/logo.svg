@@ -1,6 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 319.289 170.477">
-  <defs>
-    <style>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 407.81683 170.47731"
+   version="1.1"
+   id="svg16"
+   sodipodi:docname="logo.svg"
+   width="407.81683"
+   height="170.47731"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata20">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="715"
+     id="namedview18"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.1901443"
+     inkscape:cx="159.6445"
+     inkscape:cy="85.238497"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg16" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">
       .cls-1 {
         fill: #d9f5ff;
       }
@@ -19,15 +72,59 @@
       }
     </style>
   </defs>
-  <g id="Group_2" data-name="Group 2" transform="translate(-239 -193)">
-    <g id="Group_1" data-name="Group 1" transform="translate(239 193)">
-      <g id="bird">
-        <path id="Path_2" data-name="Path 2" class="cls-1" d="M177.175,55.36c1.832-3.665,2.356-7.853,2.356-12.171A43.287,43.287,0,0,0,136.08,0h-.785a29.5,29.5,0,0,1,0,3.4c0,10.862-3.534,20.94-10.077,28.53C97.342,35.336,74.831,58.239,74.831,86.9a53.785,53.785,0,0,0,17.014,39.917v43.66l26.7-29.4a66.035,66.035,0,0,0,12.564,1.7c31.017,0,56.276-24.6,56.276-55.491C187.383,75.776,183.195,64.259,177.175,55.36Z" transform="translate(-73.522)"/>
-        <path id="Path_3" data-name="Path 3" class="cls-2" d="M70.892,149.621c0,11.91,3.926,24.866,10.47,33.9,28.007-5.1,49.732-28.53,49.732-56.93,0-11.91-2.094-23.034-8.638-32.064C91.7,97.926,70.892,121.222,70.892,149.621Z" transform="translate(-70.892 -63.113)"/>
-        <path id="Path_4" data-name="Path 4" class="cls-2" d="M295.385,105.659a7.2,7.2,0,1,0,7.2-7.2A7.262,7.262,0,0,0,295.385,105.659Z" transform="translate(-220.786 -65.743)"/>
+  <g
+     id="Group_2"
+     data-name="Group 2"
+     transform="translate(-239,-192.99969)">
+    <g
+       id="Group_1"
+       data-name="Group 1"
+       transform="translate(239,193)">
+      <g
+         id="bird">
+        <path
+           id="Path_2"
+           data-name="Path 2"
+           class="cls-1"
+           d="m 177.175,55.36 c 1.832,-3.665 2.356,-7.853 2.356,-12.171 A 43.287,43.287 0 0 0 136.08,0 h -0.785 a 29.5,29.5 0 0 1 0,3.4 c 0,10.862 -3.534,20.94 -10.077,28.53 C 97.342,35.336 74.831,58.239 74.831,86.9 a 53.785,53.785 0 0 0 17.014,39.917 v 43.66 l 26.7,-29.4 a 66.035,66.035 0 0 0 12.564,1.7 c 31.017,0 56.276,-24.6 56.276,-55.491 -0.002,-11.51 -4.19,-23.027 -10.21,-31.926 z"
+           transform="translate(-73.522)"
+           inkscape:connector-curvature="0"
+           style="fill:#d9f5ff" />
+        <path
+           id="Path_3"
+           data-name="Path 3"
+           class="cls-2"
+           d="m 70.892,149.621 c 0,11.91 3.926,24.866 10.47,33.9 28.007,-5.1 49.732,-28.53 49.732,-56.93 0,-11.91 -2.094,-23.034 -8.638,-32.064 -30.756,3.399 -51.564,26.695 -51.564,55.094 z"
+           transform="translate(-70.892,-63.113)"
+           inkscape:connector-curvature="0"
+           style="fill:#2ca7d5" />
+        <path
+           id="Path_4"
+           data-name="Path 4"
+           class="cls-2"
+           d="m 295.385,105.659 a 7.2,7.2 0 1 0 7.2,-7.2 7.262,7.262 0 0 0 -7.2,7.2 z"
+           transform="translate(-220.786,-65.743)"
+           inkscape:connector-curvature="0"
+           style="fill:#2ca7d5" />
       </g>
-      <path id="Path_6" data-name="Path 6" class="cls-3" d="M288.6,223.213l24.34,2.614-13.864,14.66Z" transform="translate(-195.024 -185.592)"/>
-      <text id="sabiá" class="cls-4" transform="translate(121.289 133.252)"><tspan x="0" y="0">sabiá</tspan></text>
+      <path
+         id="Path_6"
+         data-name="Path 6"
+         class="cls-3"
+         d="m 288.6,223.213 24.34,2.614 -13.864,14.66 z"
+         transform="translate(-195.024,-185.592)"
+         inkscape:connector-curvature="0"
+         style="fill:#ffd98e" />
+      <text
+         id="sabiá"
+         class="cls-4"
+         transform="translate(121.289,133.252)"
+         style="font-size:113px;font-family:BebasNeueBook, 'Bebas Neue';fill:#ffd98e">
+        <tspan
+           x="0"
+           y="0"
+           id="tspan11">sabiá</tspan>
+      </text>
     </g>
   </g>
 </svg>
