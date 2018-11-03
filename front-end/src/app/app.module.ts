@@ -15,13 +15,25 @@ import { PrivateBasePage } from 'src/pages/private/private-base/private-base.pag
 import { BlockUIModule } from 'ng-block-ui';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
+import { HomePage } from 'src/pages/private/home/home.page';
+import { CourseDetailPage } from 'src/pages/private/course-detail/course-detail.page';
+import { CoursesPage } from 'src/pages/private/courses/courses.page';
+import { JobDetailPage } from 'src/pages/private/job-detail/job-detail.page';
+import { JobsPage } from 'src/pages/private/jobs/jobs.page';
+import { CameraPage } from 'src/pages/private/camera/camera.page';
 
 @NgModule({
   declarations: [
     AppComponent,
 
     LoginPage,
-    PrivateBasePage
+    PrivateBasePage,
+    HomePage,
+    JobsPage,
+    JobDetailPage,
+    CoursesPage,
+    CourseDetailPage,
+    CameraPage
   ],
   imports: [
     BrowserModule,

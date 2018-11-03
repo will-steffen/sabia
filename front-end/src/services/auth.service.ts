@@ -4,6 +4,8 @@ import { RouteConfig } from "src/enums/route-config";
 import { ServiceHandler } from "src/handlers/service.handler";
 import { ApiRoute } from "src/enums/api-route";
 import { UserService } from "./user.service";
+import { AuthInfo } from "src/models/view/auth-info";
+import { User } from "src/models/user";
 
 @Injectable()
 export class AuthService implements CanActivate {
@@ -30,6 +32,16 @@ export class AuthService implements CanActivate {
                 return false;
             }
         }
+    }
+
+    login(info: AuthInfo) : Promise<any> {
+        return new Promise((resolve, reject) => {
+            this.service.post(ApiRoute.auth, info).then(data => {
+                let user = User.fromData(data);
+                this.userService.saveUser(user);
+                resolve();
+            }).catch(err => reject(err));
+        });        
     }
 
 }
