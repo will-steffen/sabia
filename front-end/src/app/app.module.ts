@@ -23,6 +23,7 @@ import { JobDetailPage } from 'src/pages/private/job-detail/job-detail.page';
 import { JobsPage } from 'src/pages/private/jobs/jobs.page';
 import { CameraPage } from 'src/pages/private/camera/camera.page';
 import { AngularMaterialModule } from './material/angular-material.module';
+import { FaceViewComponent } from 'src/components/face-view/face-view.component';
 
 
 @NgModule({
@@ -36,7 +37,9 @@ import { AngularMaterialModule } from './material/angular-material.module';
     JobDetailPage,
     CoursesPage,
     CourseDetailPage,
-    CameraPage
+    CameraPage,
+
+    FaceViewComponent
   ],
   imports: [
     BrowserModule,
