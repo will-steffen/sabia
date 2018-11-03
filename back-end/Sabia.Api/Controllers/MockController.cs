@@ -19,7 +19,7 @@ namespace Sabia.Api.Controllers
             this.userDataAccess = userDataAccess;
         }
 
-        [HttpGet("Test")]
+        [HttpGet("test")]
         public string Test()
         {
             return "Server is Online";
@@ -32,11 +32,10 @@ namespace Sabia.Api.Controllers
             {
                 Name = "Willian Steffen",
                 Username = "will",
-                Password = "1234",
                 Email = "willian.steffen@radixeng.com.br"
             };
             userDataAccess.Save(user);
-            return userDataAccess.test();
+            return "";
         }
     }
 }

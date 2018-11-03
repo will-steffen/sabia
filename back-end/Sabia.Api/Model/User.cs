@@ -15,10 +15,9 @@ namespace Sabia.Api.Model
         public string Username { get; set; }
 
         [StringLength(250)]
-        public string Password { get; set; }
-
-        [StringLength(250)]
         public string Email { get; set; }
+
+        public virtual List<UserSkill> UserSkillList { get; set; }
 
     }
 }

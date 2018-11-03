@@ -10,9 +10,9 @@ namespace Sabia.Api.DataAccess
     {
         public UserDataAccess(SabiaContext ctx) : base(ctx) { }
 
-        public string test()
+        internal User GetByUsername(string username)
         {
-            return "teste";
+            return Context.Set<User>().FirstOrDefault(x => x.Username == username);
         }
     }
 }

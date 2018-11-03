@@ -17,6 +17,8 @@ namespace Sabia.Api
 
         public DbSet<Skill> Skill { get; set; }
 
+        public DbSet<UserSkill> UserSkill { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string current = Directory.GetCurrentDirectory();
