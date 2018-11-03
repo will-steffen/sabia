@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Sabia.Api.DataAccess;
 using Sabia.Api.Model;
+using Sabia.Api.Dtos;
 
 namespace Sabia.Api.Controllers
 {
