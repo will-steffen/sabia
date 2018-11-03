@@ -4,6 +4,7 @@ import { StorageHandler } from 'src/handlers/storage.handler';
 import { User } from 'src/models/user';
 import { Table } from 'src/enums/table';
 import { ApiRoute } from 'src/enums/api-route';
+import { AuthInfo } from 'src/models/view/auth-info';
 
 @Injectable()
 export class UserService {
@@ -23,18 +24,9 @@ export class UserService {
         this.storage.deleteTable(Table.USER);
     }
 
-    updateUserFromServer() : Promise<void> {
-        return new Promise((resolve, reject) => {
-            this.service.get(ApiRoute.user.logged).then(data => {
-                let user = this.getUser();
-                user = Object.assign(user, data);
-                this.storage.save(Table.USER, user);
-                resolve();
-            }).catch(err => {
-                console.log(err);
-            });
-        });
-    }
-
+    saveUser(user: User) {
+        this.logout();
+        this.storage.save(Table.USER, user);
+    }    
 
 }

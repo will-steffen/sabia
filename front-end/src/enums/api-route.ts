@@ -3,12 +3,9 @@ import { environment } from "src/environments/environment";
 
 let basePath = environment.apiURL;
 
-export const ApiRoute = {
-    auth: {
-        login: basePath + '/auth/login',
-        hasSession: basePath + '/auth'
-    },
+export const ApiRoute = {    
+    auth: basePath + '/auth',
     user: {
-        logged: basePath + '/user'
+        login: basePath + '/user/login'
     }
 };

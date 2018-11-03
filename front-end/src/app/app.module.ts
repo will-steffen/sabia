@@ -15,50 +15,28 @@ import { PrivateBasePage } from 'src/pages/private/private-base/private-base.pag
 import { BlockUIModule } from 'ng-block-ui';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
-import {
-  MatAutocompleteModule,
-  MatBadgeModule,
-  MatBottomSheetModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatDividerModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatStepperModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatTreeModule,
-} from '@angular/material';
+
+import { HomePage } from 'src/pages/private/home/home.page';
+import { CourseDetailPage } from 'src/pages/private/course-detail/course-detail.page';
+import { CoursesPage } from 'src/pages/private/courses/courses.page';
+import { JobDetailPage } from 'src/pages/private/job-detail/job-detail.page';
+import { JobsPage } from 'src/pages/private/jobs/jobs.page';
+import { CameraPage } from 'src/pages/private/camera/camera.page';
+import { AngularMaterialModule } from './material/angular-material.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
 
     LoginPage,
-    PrivateBasePage
+    PrivateBasePage,
+    HomePage,
+    JobsPage,
+    JobDetailPage,
+    CoursesPage,
+    CourseDetailPage,
+    CameraPage
   ],
   imports: [
     BrowserModule,
@@ -68,41 +46,7 @@ import {
     HttpClientModule,
     BlockUIModule.forRoot(),
     ToastrModule.forRoot(),
-    MatAutocompleteModule,
-  MatBadgeModule,
-  MatBottomSheetModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatDividerModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatStepperModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatTreeModule,
+    AngularMaterialModule  
   ],
   providers: [
     ServiceHandler,

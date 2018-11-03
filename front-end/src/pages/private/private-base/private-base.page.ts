@@ -5,6 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './private-base.page.html',
   styleUrls: ['./private-base.page.less']
 })
-export class PrivateBasePage {
-  title = 'Private Base';
-}
+export class PrivateBasePage { }
