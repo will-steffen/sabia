@@ -19,6 +19,12 @@ namespace Sabia.Api.Controllers
             this.userDataAccess = userDataAccess;
         }
 
+        [HttpGet("Test")]
+        public string Get()
+        {
+            return "Server is Online";
+        }
+
         [HttpGet]
         public string Get()
         {
