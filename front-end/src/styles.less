@@ -27,7 +27,7 @@ background: #ccc;
 
         a{
             color: #009dec;
-            cursor: pointer;
+            cursor: pointer
         }
         .description{
             padding: 10px;
@@ -47,6 +47,41 @@ background: #ccc;
     .right{
         
     }
+}
+
+.lista{
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+        display: flex;
+        padding: 5px;
+        a{
+            display: flex;
+            img{
+                width: 30px;
+                height: 30px;
+                align-self: center;
+            }
+            h5{
+                align-self: center;
+                margin: 0 10px;
+            }
+            b{
+                align-self: center;
+            }
+        }
+    }
+}
+.briefing{
+    width: 60%;
+    margin: 0 auto;
+}
+mat-panel-title{
+    flex: 1;
+}
+mat-expansion-panel-header{
+    border: 1px solid rgb(204, 204, 204);
 }
 header{
     background: @bluedark;

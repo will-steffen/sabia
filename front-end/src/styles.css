@@ -34,6 +34,40 @@
   width: 10px;
   margin: 0 5px;
 }
+.lista {
+  margin: 0;
+  padding: 0;
+}
+.lista li {
+  list-style: none;
+  display: flex;
+  padding: 5px;
+}
+.lista li a {
+  display: flex;
+}
+.lista li a img {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+}
+.lista li a h5 {
+  align-self: center;
+  margin: 0 10px;
+}
+.lista li a b {
+  align-self: center;
+}
+.briefing {
+  width: 60%;
+  margin: 0 auto;
+}
+mat-panel-title {
+  flex: 1;
+}
+mat-expansion-panel-header {
+  border: 1px solid #cccccc;
+}
 header {
   background: #2B8DBF;
   display: flex;
