@@ -1,0 +1,155 @@
+/*Variables*/
+header {
+  background: #2B8DBF;
+}
+header .page-title {
+  display: flex;
+  height: 90px;
+  margin-bottom: 10px;
+  border-bottom: solid 2px #6ff8fd;
+}
+header .page-title img {
+  width: 70px;
+}
+header .page-title h2 {
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 35px;
+  align-self: center;
+  margin: 15px;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+  margin: 0 10px;
+}
+body {
+  background: #4CB9E2;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.footer {
+  display: flex;
+  justify-content: flex-end;
+}
+.footer a {
+  margin: 10px;
+  cursor: pointer;
+}
+.footer a img {
+  width: 50px;
+}
+.footer a:hover {
+  opacity: .5;
+}
+.logo {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding: 1% 0;
+}
+.logo img {
+  width: 200px;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.buttons div {
+  text-align: center;
+  background: #2B8DBF;
+  padding: 1%;
+  margin: 1%;
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 1px 1px 1px #00000014;
+  cursor: pointer;
+}
+.buttons div h1 {
+  color: #fff;
+}
+.buttons div img {
+  width: 60px;
+  height: auto;
+}
+.buttons div:hover {
+  background: #FFD98E;
+}
+.mat-menu-item {
+  background: #2B8DBF;
+  color: #fff;
+}
+.mat-menu-item img {
+  width: 20px;
+}
+.mat-icon-button {
+  background: transparent;
+}
+.lista-cursos {
+  display: flex;
+}
+.lista-cursos .curso {
+  box-shadow: 1px 1px 1px #00000057;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 20px 0 20px 0;
+  flex: 1;
+  max-width: 320px;
+  min-width: 300px;
+  margin: 10px;
+}
+.lista-cursos .curso:hover {
+  background: #2B8DBF;
+}
+.lista-cursos .curso:hover h3 {
+  color: #fff;
+}
+.lista-cursos .curso .avanco {
+  background: #efefef;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.lista-cursos .curso .avanco div {
+  color: #fff;
+  width: 20%;
+  padding: 0 5px;
+}
+.lista-cursos .curso .avanco div.green {
+  background: #8dd072;
+}
+.lista-cursos .curso h3 {
+  color: #2B8DBF;
+  padding: 0 10px;
+  float: left;
+  margin: 10px;
+}
+.lista-cursos .curso .nivel {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #2B8DBF;
+}
+.lista-cursos .curso .nivel img {
+  width: 20px;
+  padding: 0 0 0 10px;
+}
+.lista-cursos .curso .rotulo img {
+  float: left;
+  width: 100%;
+}
+.lista-cursos .curso .rotulo .duracao {
+  position: absolute;
+  z-index: 2;
+  background: #2B8DBF;
+  padding: 5px;
+  font-size: 18px;
+  border-radius: 20px 0 20px 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 800;
+  color: #fff;
+}
+.lista-cursos .curso .rotulo .duracao img {
+  width: 20px;
+}

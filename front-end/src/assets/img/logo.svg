@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 319.289 170.477">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d9f5ff;
+      }
+
+      .cls-2 {
+        fill: #2ca7d5;
+      }
+
+      .cls-3, .cls-4 {
+        fill: #ffd98e;
+      }
+
+      .cls-4 {
+        font-size: 113px;
+        font-family: BebasNeueBook, Bebas Neue;
+      }
+    </style>
+  </defs>
+  <g id="Group_2" data-name="Group 2" transform="translate(-239 -193)">
+    <g id="Group_1" data-name="Group 1" transform="translate(239 193)">
+      <g id="bird">
+        <path id="Path_2" data-name="Path 2" class="cls-1" d="M177.175,55.36c1.832-3.665,2.356-7.853,2.356-12.171A43.287,43.287,0,0,0,136.08,0h-.785a29.5,29.5,0,0,1,0,3.4c0,10.862-3.534,20.94-10.077,28.53C97.342,35.336,74.831,58.239,74.831,86.9a53.785,53.785,0,0,0,17.014,39.917v43.66l26.7-29.4a66.035,66.035,0,0,0,12.564,1.7c31.017,0,56.276-24.6,56.276-55.491C187.383,75.776,183.195,64.259,177.175,55.36Z" transform="translate(-73.522)"/>
+        <path id="Path_3" data-name="Path 3" class="cls-2" d="M70.892,149.621c0,11.91,3.926,24.866,10.47,33.9,28.007-5.1,49.732-28.53,49.732-56.93,0-11.91-2.094-23.034-8.638-32.064C91.7,97.926,70.892,121.222,70.892,149.621Z" transform="translate(-70.892 -63.113)"/>
+        <path id="Path_4" data-name="Path 4" class="cls-2" d="M295.385,105.659a7.2,7.2,0,1,0,7.2-7.2A7.262,7.262,0,0,0,295.385,105.659Z" transform="translate(-220.786 -65.743)"/>
+      </g>
+      <path id="Path_6" data-name="Path 6" class="cls-3" d="M288.6,223.213l24.34,2.614-13.864,14.66Z" transform="translate(-195.024 -185.592)"/>
+      <text id="sabiá" class="cls-4" transform="translate(121.289 133.252)"><tspan x="0" y="0">sabiá</tspan></text>
+    </g>
+  </g>
+</svg>

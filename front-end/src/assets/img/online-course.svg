@@ -1,0 +1,46 @@
+<svg id="online-course" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 131 131">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #804537;
+      }
+
+      .cls-2 {
+        fill: #cbb292;
+      }
+
+      .cls-3 {
+        fill: #7f6e5d;
+      }
+
+      .cls-4 {
+        fill: #e64c3c;
+      }
+
+      .cls-5 {
+        fill: #fdd7ad;
+      }
+
+      .cls-6 {
+        fill: #ecf0f1;
+      }
+
+      .cls-7 {
+        fill: #bdc3c7;
+      }
+
+      .cls-8 {
+        fill: #95a5a5;
+      }
+    </style>
+  </defs>
+  <path id="Path_9" data-name="Path 9" class="cls-1" d="M108.414,26.483h4.517A4.517,4.517,0,0,1,117.448,31v83.569a4.517,4.517,0,0,1-4.517,4.517H4.517A4.517,4.517,0,0,1,0,114.569V31a4.517,4.517,0,0,1,4.517-4.517Z" transform="translate(0 -19.707)"/>
+  <path id="Path_10" data-name="Path 10" class="cls-2" d="M85,6.776V88.651a7.188,7.188,0,0,0-7-7.341H35.31V4.517A4.531,4.531,0,0,1,39.827,0h38.4A6.767,6.767,0,0,1,85,6.776Z" transform="translate(-26.276)"/>
+  <path id="Path_11" data-name="Path 11" class="cls-3" d="M85,325.134v1.694H35.31v-9.034H78A7.187,7.187,0,0,1,85,325.134Z" transform="translate(-26.276 -236.483)"/>
+  <path id="Path_12" data-name="Path 12" class="cls-4" d="M88.69,38.4,79.655,27.1,70.621,38.4V0H88.69Z" transform="translate(-52.552 0)"/>
+  <path id="Path_13" data-name="Path 13" class="cls-5" d="M229.512,6.776V88.651a7.188,7.188,0,0,1,7-7.341H279.2V4.517A4.53,4.53,0,0,0,274.684,0h-38.4a6.767,6.767,0,0,0-6.776,6.776Z" transform="translate(-170.788)"/>
+  <path id="Path_14" data-name="Path 14" class="cls-2" d="M229.512,325.134v1.694H279.2v-9.034H236.514A7.187,7.187,0,0,0,229.512,325.134Z" transform="translate(-170.788 -236.483)"/>
+  <path id="Path_15" data-name="Path 15" class="cls-6" d="M349.413,203.035H335.861A18.064,18.064,0,0,0,317.792,221.1v42.914a18.064,18.064,0,0,0,18.069,18.069h13.552a18.064,18.064,0,0,0,18.069-18.069V221.1a18.064,18.064,0,0,0-18.069-18.069Z" transform="translate(-236.482 -151.087)"/>
+  <path id="Path_16" data-name="Path 16" class="cls-7" d="M439.742,221.1v15.81H414.9V203.035h6.776A18.064,18.064,0,0,1,439.742,221.1Z" transform="translate(-308.742 -151.087)"/>
+  <path id="Path_17" data-name="Path 17" class="cls-8" d="M367.482,335.448v27.1a18.064,18.064,0,0,1-18.069,18.069H335.861a18.064,18.064,0,0,1-18.069-18.069v-27.1Z" transform="translate(-236.482 -249.621)"/>
+</svg>
