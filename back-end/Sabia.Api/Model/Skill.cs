@@ -9,5 +9,7 @@ namespace Sabia.Api.Model
     {
         [StringLength(250)]
         public string Name { get; set; }
+
+        public virtual List<UserSkill> UserSkillList { get; set; }
     }
 }

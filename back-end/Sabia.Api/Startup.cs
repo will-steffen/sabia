@@ -37,6 +37,7 @@ namespace Sabia.Api
 
             services.AddScoped<SkillDataAccess>();
             services.AddScoped<UserDataAccess>();
+            services.AddScoped<UserSkillDataAccess>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
