@@ -2,8 +2,8 @@
 export const RouteConfig = {  
     login:  'login',
     home: '',
-    course: 'course',
-    job: 'job',
+    course: 'cursos',
+    job: 'trabalhos',
     camera: 'camera'
 }
 
