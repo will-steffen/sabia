@@ -20,7 +20,7 @@ namespace Sabia.Api.Controllers
         }
 
         [HttpGet("Test")]
-        public string Get()
+        public string Test()
         {
             return "Server is Online";
         }
