@@ -17,13 +17,47 @@ background: #efefef;
 ::-webkit-scrollbar-thumb {
 background: #ccc; 
 }
+.container{
+    display: flex;
+    background: #043B57;
+    .left{
+        color: #fff;
+        font-family: @fonte;
+        padding: 5%;
+
+        a{
+            color: #009dec;
+            cursor: pointer;
+        }
+        .description{
+            padding: 10px;
+        }
+        h2{
+            color: #fff;
+            font-size: 30px;
+        }
+
+        .breadcrumb{
+            img{
+                width: 10px;
+                margin: 0 5px;
+            }
+        }
+    }
+    .right{
+        
+    }
+}
 header{
     background: @bluedark;
+    display: flex;
     .page-title{
         display: flex;
         height: 90px;
-        margin-bottom: 10px;
-        border-bottom: solid 2px #6ff8fd;
+        margin: 0 10px;
+        &.selected{
+            border-bottom: solid 5px #6ff8fd;
+        }
         img{
             width: 70px;
         }
@@ -50,9 +84,15 @@ body{
     padding: 0;
     margin: 0;
 }
+.main{
+    background: @primary;
+    height: 100vh;
+    width: 100vw;
+}
 .footer{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    padding: 2%;
     a{
         margin: 10px;
         cursor: pointer;
