@@ -35,7 +35,7 @@ namespace Sabia.Api
                        .AllowAnyHeader();
             }));
 
-
+            services.AddScoped<SkillDataAccess>();
             services.AddScoped<UserDataAccess>();
         }
 

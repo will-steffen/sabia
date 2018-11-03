@@ -19,5 +19,6 @@ namespace Sabia.Api.Model
 
         [StringLength(250)]
         public string Email { get; set; }
+
     }
 }

@@ -15,7 +15,7 @@ namespace Sabia.Api
 
         public DbSet<User> User { get; set; }
 
-
+        public DbSet<Skill> Skill { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
