@@ -42,10 +42,38 @@ namespace Sabia.Api.DataAccess
             return JobDTO;
         }
 
+        internal bool FinishJob(string userId, string jobId)
+        {
+            Job job = GetByIdOrSlug(jobId);
+            User user = userDataAccess.GetByIdOrSlug(userId);
+            if (user == null || job == null)
+            {
+                return false;
+            }
+            if (!job.Completed)
+            {
+                user.MoneyEarned += job.Money;
+            }
+            job.Completed = true;
+            job.ReportedProgression = 100;
+            try
+            {
+                userDataAccess.Save(user);
+                base.Save(job);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         internal List<JobDTO> GetAll(string userId)
         {
             User user = userDataAccess.GetByIdOrSlug(userId);
-            var Jobs = Context.Set<Job>().ToList().Select(x => x.ToDTO()).ToList();
+            var Jobs = Context.Set<Job>().ToList()
+                .Where(x=>!x.Completed)
+                .Select(x => x.ToDTO()).ToList();
             Jobs.ForEach(job =>
             {
                 List<long> CompletedCourses = user.Courses

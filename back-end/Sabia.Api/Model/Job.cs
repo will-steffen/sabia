@@ -32,7 +32,7 @@ namespace Sabia.Api.Model
         public long? UserId { get; set; }
 
         [ForeignKey("UserId")]
-        [InverseProperty("CurrentJob")]
+        [InverseProperty("CurrentJobs")]
         public virtual User UserDoingJob { get; set; }
 
         public float EstimatedHours { get; set; }

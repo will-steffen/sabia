@@ -32,7 +32,7 @@ namespace Sabia.Api.Model
         [DefaultValue(0)]
         public float MoneyEarned { get; set; }
 
-        public virtual Job CurrentJob { get; set; }
+        public virtual List<Job> CurrentJobs { get; set; }
 
         public virtual List<UserCourse> Courses { get; set; }
 
@@ -49,7 +49,7 @@ namespace Sabia.Api.Model
                 StudyHours = this.StudyHours,
                 TotalHour = this.TotalHour,
                 MoneyEarned = this.MoneyEarned,
-                CurrentJobName = this.CurrentJob?.Title ?? "",
+                CurrentJobName =  "",
                 Courses = this.Courses
                 .Where(x=>x.Progression >= 100 && !x.Course.Type.Basic)
                 .GroupBy(x=>x.Course.Type.Name).Select(x=> new UserCourseTypeDTO
