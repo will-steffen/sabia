@@ -1,267 +1,59 @@
 <app-navigation-header></app-navigation-header>
-<mat-accordion [multi]="true" >
-    <mat-expansion-panel [expanded]="'true'">
+<mat-accordion [multi]="true" *ngIf="myCourses">
+    <mat-expansion-panel [expanded]="'true'" *ngIf="myCourses.length > 0">
         <mat-expansion-panel-header>
-        <mat-panel-title>
-            <h2>Meus Cursos</h2>
-        </mat-panel-title>
+            <mat-panel-title>
+                <h2>Meus Cursos</h2>
+            </mat-panel-title>
         </mat-expansion-panel-header>
         <div class="lista-cursos">
-            <div class="curso">
+            <div class="curso" *ngFor="let c of myCourses" (click)="open(c)">
                 <div class="rotulo">
-                    <img src="assets/img/dummy.png"/>
+                    <img src="assets/img/dummy.png" />
                     <div class="duracao">
-                        <img src="assets/img/clock.svg"/>
-                        <span>20h</span>
+                        <img src="assets/img/clock.svg" />
+                        <span>{{ c.expectedHours }}h</span>
                         <div class="avanco">
-                            <div class="green">
-                                20%
+                            <div class="green" [style.width]=" (c.userProgression * 0.95) + '%'">
+                                {{ c.userProgression }}%
                             </div>
                         </div>
                     </div>
                 </div>
-                <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
+                <h3> {{ c.name }}</h3>
+                <br>
                 <div class="nivel">
                     <mat-chip-list>
-                        <mat-chip color="primary" selected>Avançado</mat-chip>
-                        <mat-chip>HTML</mat-chip>
-                        <mat-chip>CSS</mat-chip>
-                        <mat-chip>JavaScript</mat-chip>
-                    </mat-chip-list>
-                </div>
-            </div>
-            <div class="curso">
-                <div class="rotulo">
-                    <img src="assets/img/dummy.png"/>
-                    <div class="duracao">
-                        <img src="assets/img/clock.svg"/>
-                        <span>20h</span>
-                        <div class="avanco">
-                            <div class="green">
-                                20%
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
-                <div class="nivel">
-                    <mat-chip-list>
-                        <mat-chip color="primary" selected>Avançado</mat-chip>
-                        <mat-chip>HTML</mat-chip>
-                        <mat-chip>CSS</mat-chip>
-                        <mat-chip>JavaScript</mat-chip>
-                    </mat-chip-list>
-                </div>
-            </div>
-            <div class="curso">
-                <div class="rotulo">
-                    <img src="assets/img/dummy.png"/>
-                    <div class="duracao">
-                        <img src="assets/img/clock.svg"/>
-                        <span>20h</span>
-                        <div class="avanco">
-                            <div class="green">
-                                20%
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
-                <div class="nivel">
-                    <mat-chip-list>
-                        <mat-chip color="primary" selected>Avançado</mat-chip>
-                        <mat-chip>HTML</mat-chip>
-                        <mat-chip>CSS</mat-chip>
-                        <mat-chip>JavaScript</mat-chip>
-                    </mat-chip-list>
-                </div>
-            </div>
-            <div class="curso">
-                <div class="rotulo">
-                    <img src="assets/img/dummy.png"/>
-                    <div class="duracao">
-                        <img src="assets/img/clock.svg"/>
-                        <span>20h</span>
-                        <div class="avanco">
-                            <div class="green">
-                                20%
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
-                <div class="nivel">
-                    <mat-chip-list>
-                        <mat-chip color="primary" selected>Avançado</mat-chip>
-                        <mat-chip>HTML</mat-chip>
-                        <mat-chip>CSS</mat-chip>
-                        <mat-chip>JavaScript</mat-chip>
-                    </mat-chip-list>
-                </div>
-            </div>
-            <div class="curso">
-                <div class="rotulo">
-                    <img src="assets/img/dummy.png"/>
-                    <div class="duracao">
-                        <img src="assets/img/clock.svg"/>
-                        <span>20h</span>
-                        <div class="avanco">
-                            <div class="green">
-                                20%
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
-                <div class="nivel">
-                    <mat-chip-list>
-                        <mat-chip color="primary" selected>Avançado</mat-chip>
-                        <mat-chip>HTML</mat-chip>
-                        <mat-chip>CSS</mat-chip>
-                        <mat-chip>JavaScript</mat-chip>
-                    </mat-chip-list>
-                </div>
-            </div>
-            <div class="curso">
-                <div class="rotulo">
-                    <img src="assets/img/dummy.png"/>
-                    <div class="duracao">
-                        <img src="assets/img/clock.svg"/>
-                        <span>20h</span>
-                        <div class="avanco">
-                            <div class="green">
-                                20%
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
-                <div class="nivel">
-                    <mat-chip-list>
-                        <mat-chip color="primary" selected>Avançado</mat-chip>
-                        <mat-chip>HTML</mat-chip>
-                        <mat-chip>CSS</mat-chip>
-                        <mat-chip>JavaScript</mat-chip>
+                        <mat-chip *ngIf="c.level == 3" color="primary" selected>Avançado</mat-chip>
+                        <mat-chip *ngIf="c.level == 2" color="primary" selected>Intermediário</mat-chip>
+                        <mat-chip *ngIf="c.level == 1" color="primary" selected>Iniciante</mat-chip>
                     </mat-chip-list>
                 </div>
             </div>
         </div>
     </mat-expansion-panel>
-    <mat-expansion-panel (opened)="panelOpenState = true"
-                            (closed)="panelOpenState = false" [expanded]="'true'">
+    <mat-expansion-panel [expanded]="'true'" *ngIf="availableCourses.length > 0">
         <mat-expansion-panel-header>
-        <mat-panel-title>
-            <h2>Cursos Disponíveis</h2>
-        </mat-panel-title>
+            <mat-panel-title>
+                <h2>Cursos Disponíveis</h2>
+            </mat-panel-title>
         </mat-expansion-panel-header>
         <div class="lista-cursos">
-            <div class="curso">
+            <div class="curso" *ngFor="let c of availableCourses" (click)="open(c)">
                 <div class="rotulo">
-                    <img src="assets/img/dummy.png"/>
+                    <img src="assets/img/dummy.png" />
                     <div class="duracao">
-                        <img src="assets/img/clock.svg"/>
-                        <span>20h</span>
+                        <img src="assets/img/clock.svg" />
+                        <span>{{ c.expectedHours }}h</span>
                     </div>
                 </div>
-                <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
+                <h3> {{ c.name }}</h3>
+                <br>
                 <div class="nivel">
                     <mat-chip-list>
-                        <mat-chip color="primary" selected>Avançado</mat-chip>
-                        <mat-chip>HTML</mat-chip>
-                        <mat-chip>CSS</mat-chip>
-                        <mat-chip>JavaScript</mat-chip>
-                    </mat-chip-list>
-                </div>
-            </div>
-            <div class="curso">
-                <div class="rotulo">
-                    <img src="assets/img/dummy.png"/>
-                    <div class="duracao">
-                        <img src="assets/img/clock.svg"/>
-                        <span>20h</span>
-                    </div>
-                </div>
-                <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
-                <div class="nivel">
-                    <mat-chip-list>
-                        <mat-chip color="primary" selected>Avançado</mat-chip>
-                        <mat-chip>HTML</mat-chip>
-                        <mat-chip>CSS</mat-chip>
-                        <mat-chip>JavaScript</mat-chip>
-                    </mat-chip-list>
-                </div>
-            </div>
-            <div class="curso">
-                <div class="rotulo">
-                    <img src="assets/img/dummy.png"/>
-                    <div class="duracao">
-                        <img src="assets/img/clock.svg"/>
-                        <span>20h</span>
-                    </div>
-                </div>
-                <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
-                <div class="nivel">
-                    <mat-chip-list>
-                        <mat-chip color="primary" selected>Avançado</mat-chip>
-                        <mat-chip>HTML</mat-chip>
-                        <mat-chip>CSS</mat-chip>
-                        <mat-chip>JavaScript</mat-chip>
-                    </mat-chip-list>
-                </div>
-            </div>
-            <div class="curso">
-                <div class="rotulo">
-                    <img src="assets/img/dummy.png"/>
-                    <div class="duracao">
-                        <img src="assets/img/clock.svg"/>
-                        <span>20h</span>
-                    </div>
-                </div>
-                <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
-                <div class="nivel">
-                    <mat-chip-list>
-                        <mat-chip color="primary" selected>Avançado</mat-chip>
-                        <mat-chip>HTML</mat-chip>
-                        <mat-chip>CSS</mat-chip>
-                        <mat-chip>JavaScript</mat-chip>
-                    </mat-chip-list>
-                </div>
-            </div>
-            <div class="curso">
-                <div class="rotulo">
-                    <img src="assets/img/dummy.png"/>
-                    <div class="duracao">
-                        <img src="assets/img/clock.svg"/>
-                        <span>20h</span>
-
-                    </div>
-                </div>
-                <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
-                <div class="nivel">
-                    <mat-chip-list>
-                        <mat-chip color="primary" selected>Avançado</mat-chip>
-                        <mat-chip>HTML</mat-chip>
-                        <mat-chip>CSS</mat-chip>
-                        <mat-chip>JavaScript</mat-chip>
-                    </mat-chip-list>
-                </div>
-            </div>
-            <div class="curso">
-                <div class="rotulo">
-                    <img src="assets/img/dummy.png"/>
-                    <div class="duracao">
-                        <img src="assets/img/clock.svg"/>
-                        <span>20h</span>
-
-                    </div>
-                </div>
-                <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
-                <div class="nivel">
-                    <mat-chip-list>
-                        <mat-chip color="primary" selected>Avançado</mat-chip>
-                        <mat-chip>HTML</mat-chip>
-                        <mat-chip>CSS</mat-chip>
-                        <mat-chip>JavaScript</mat-chip>
+                        <mat-chip *ngIf="c.level == 3" color="primary" selected>Avançado</mat-chip>
+                        <mat-chip *ngIf="c.level == 2" color="primary" selected>Intermediário</mat-chip>
+                        <mat-chip *ngIf="c.level == 1" color="primary" selected>Iniciante</mat-chip>
                     </mat-chip-list>
                 </div>
             </div>

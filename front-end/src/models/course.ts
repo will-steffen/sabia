@@ -17,6 +17,7 @@ export class Course extends BaseModel {
     userCompleted: boolean;
     userMeetRequirement: boolean;
     userProgression: number;
+    courseAssigned: boolean;
 
     static fromData(data) {
         let u = super.fromData(data);

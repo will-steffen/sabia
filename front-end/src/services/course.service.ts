@@ -16,8 +16,7 @@ export class CourseService {
     getCourses() : Promise<any[]>{
         return new Promise((resolve, reject) => {
             let user = this.userService.getUser();
-            this.service.get(ApiRoute.course.base + '/' + user.id).then(data => {  
-                console.log(data);  
+            this.service.get(ApiRoute.course.base + '/' + user.id).then(data => {                  
                 this.courses = data.map(x => Course.fromData(x));          
                 resolve(this.courses);
             }).catch(err => {
