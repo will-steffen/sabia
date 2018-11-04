@@ -9,13 +9,10 @@
 
     <div class="briefing">
         <h4>Objetivo</h4>
-        <ul>
-            <li>Automatizar a Criação e Configuração (as-a-code) de Imagens Jenkins</li>
-            <li>Arquitetura de Larga Escala com AutoScale de Slaves via Kubernetes</li>
-        </ul>
+        <div [innerHTML]="job.objective"></div>
 
         <h4>Requisitos</h4>
-        <p>Conhecimentos e Setup Básico de Jenkins, Docker e Kubernetes</p>
+        <ul> <li *ngFor="let req of job.requirements"> {{ req.courseName }} </li> </ul>
 
         <h4>Informações Técnicas</h4>
         <ul class="info-tecnica">
@@ -24,17 +21,8 @@
             <li><img src="assets/img/key.png" /><i>Senha:</i> desen@038897</li>
         </ul>
 
-        <h4>Descrição</h4>
-        <p>Problemas em manter diversas instalações de Jenkins, e suas respectivas configurações? Quer construir sua
-            plataforma de CI em um modelo robusto via Jenkins? Neste curso iremos tratar:</p>
-        <ul>
-            <li>Administração de instâncias de Jenkins em escala;</li>
-            <li>Abordagens de configuração as-a-code;</li>
-            <li>Opções de automações dentro da ferramenta baseados em imagens Docker, Plugins e Códigos Groovy;</li>
-            <li>Otimizar a utilização de recursos computacionais;</li>
-            <li>Garantir reprodutibilidade entre instâncias de Jenkins;</li>
-            <li>Minimizar trabalhos operacionais;</li>
-        </ul>
+        <h4>Descrição</h4> 
+        <div [innerHTML]="job.extendedDescription"></div>
 
         <h4>Anexos</h4>
         <div class="anexos">
