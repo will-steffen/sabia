@@ -23,4 +23,15 @@ export class JobService {
             })
         });
     }
+
+    getJob(slug) : Promise<Job> {
+        return new Promise((resolve, reject) => {
+            let user = this.userService.getUser();
+            this.service.get(ApiRoute.job.base + '/' + slug + '/' + user.id).then(data => {           
+                resolve(Job.fromData(data));
+            }).catch(err => {
+                reject(err);
+            })
+        });
+    }
 }

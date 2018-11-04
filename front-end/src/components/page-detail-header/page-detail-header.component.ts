@@ -9,4 +9,6 @@ import { Component, Input } from '@angular/core';
 export class PageDetailHeaderComponent {
     @Input() title = "";
     @Input() description = "";
+    @Input() actionButton = "";
+    @Input() onActionButton = () => {};
 }

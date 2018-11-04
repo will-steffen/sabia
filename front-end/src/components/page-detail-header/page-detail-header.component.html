@@ -1,13 +1,14 @@
 <div class="container">
     <div class="left">
         <div class="breadcrumb">
-            <a>Cursos</a><img src="assets/img/right-arrow.png" /><a>Meus Cursos</a>
+            <!-- <a>Cursos</a><img src="assets/img/right-arrow.png" /><a>Meus Cursos</a> -->
         </div>
 
         <h2>{{ title }}</h2>
         <div class="description">{{ description }}</div>
         <div class="example-button-row">
-            <button mat-raised-button color="primary">Concluir Trabalho</button>
+            <button mat-raised-button color="primary" *ngIf="actionButton"
+            (click)="onActionButton()">{{ actionButton }}</button>
         </div>
     </div>
     <div class="right">
