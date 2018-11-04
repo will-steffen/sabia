@@ -100,6 +100,30 @@ align .profile a:hover {
   width: 60%;
   margin: 0 auto;
 }
+.briefing h4 {
+  font-size: 20px;
+  color: #043B57;
+}
+a {
+  cursor: pointer;
+}
+.info-tecnica {
+  margin: 0;
+  padding: 0;
+}
+.info-tecnica li {
+  list-style: none;
+}
+.info-tecnica li a {
+  font-weight: 600;
+}
+.info-tecnica li a:hover {
+  color: #4CB9E2;
+}
+.info-tecnica li img {
+  width: 26px;
+  margin-right: 5px;
+}
 mat-panel-title {
   flex: 1;
 }
