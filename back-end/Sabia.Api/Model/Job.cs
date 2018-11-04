@@ -27,7 +27,9 @@ namespace Sabia.Api.Model
         [InverseProperty("CurrentJob")]
         public virtual User UserDoingJob { get; set; }
 
-        public long UsedHours { get; set; }
+        public float EstimatedHours { get; set; }
+
+        public float UsedHours { get; set; }
 
         public long ReportedProgression { get; set; }
 
@@ -49,12 +51,15 @@ namespace Sabia.Api.Model
         {
             return new JobDTO
             {
+                Id = this.Id,
                 Title = this.Title,
                 Slug = this.Title.ToSlug(),
                 Description = this.Description,
                 imagePath = this.imagePath,
                 UserId = this.UserId,
                 UsedHours = this.UsedHours,
+                EstimatedHours = this.EstimatedHours,
+                Money = this.Money,
                 ReportedProgression = this.ReportedProgression,
                 Completed = this.Completed,
                 Requirements = this.Requirements.Select(x => x.ToDTO()).ToList(),

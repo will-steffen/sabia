@@ -9,6 +9,8 @@ namespace Sabia.Api.DTOs
 {
     public class JobDTO
     {
+        public long Id { get; set; }
+
         public string Title { get; set; }
 
         public string Slug { get; set; }
@@ -21,11 +23,15 @@ namespace Sabia.Api.DTOs
 
         public string UserDoingJob { get; set; }
 
-        public long UsedHours { get; set; }
+        public float UsedHours { get; set; }
 
         public long ReportedProgression { get; set; }
 
         public bool Completed  { get; set; }
+
+        public float EstimatedHours { get; set; }
+
+        public float Money { get; set; }
 
         public List<JobRequirementDTO> Requirements { get; set; }
 
