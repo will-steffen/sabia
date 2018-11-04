@@ -3,7 +3,7 @@
 @bluedark:#2B8DBF;
 @secondary: #FFD98E;
 @fonte: 'Roboto Condensed', sans-serif;
-
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 /* Scrollbar styles */
 ::-webkit-scrollbar {
 width: 12px;
@@ -35,6 +35,7 @@ background: #ccc;
         h2{
             color: #fff;
             font-size: 30px;
+            
         }
 
         .breadcrumb{
@@ -141,11 +142,20 @@ header{
     }
 }
 h2{
-    margin: 0;
+    margin: 15px 10px;
     padding: 0;
     font-family: @fonte;
     color: #717070;
-    margin: 0 10px;
+}
+mat-panel-description{
+    b{
+        font-size: 30px;
+        margin: 7px;
+    }
+    span{
+        margin-top: 20px;
+    }
+    
 }
 body{
     background: #f3f3f3;
@@ -231,13 +241,37 @@ body{
         max-width: unset;
         margin-bottom: 10px;
 
+        .nivel{
+            font-family: @fonte;
+            color: @bluedark;
+            padding: 0 10px;
+            span{
+                padding: 10px;
+            }
+            
+        }
+        .rotulo{
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex: 1;
+            background-image: url('assets/img/dummy.png');
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+           .mat-raised-button.mat-primary{
+                font-size: 24px;
+                width: 60%;
+                margin: 8px auto;
+                padding: 8px;
+                font-family: @fonte;
+            }
+        }
         .duracao{
             z-index: 2;
             display: flex;
-            background: @bluedark;
-            padding: 5px;
+            background: #00000078;
+            padding: 15px;
             font-size: 18px;
-            margin-top: -5px;
             font-family: @fonte;
             font-weight: 800;
             color: #fff;
@@ -256,13 +290,19 @@ body{
             float: none;
             padding: 10px;
             margin: 0;
+            color: @primary;
         }
         p{
             padding: 10px;
+            width: 80%;
+            color: #6f6e6e;
+            line-height: 23px;
         }
 
         .infos{
             background: #fff;
+            padding: 0 35px;
+            flex: 2;
         }
     } 
 
@@ -310,6 +350,7 @@ body{
         .nivel{
             font-family: @fonte;
             color: @bluedark;
+            padding: 0 10px;
             span{
                 padding: 10px;
             }

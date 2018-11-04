@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './jobs.page.html',
   styleUrls: ['./jobs.page.less']
 })
-export class JobsPage { }
+export class JobsPage { 
+  panelOpenState = false;
+}
