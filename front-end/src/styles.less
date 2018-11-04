@@ -116,29 +116,25 @@ header{
     justify-content: space-between;
     .menu{
         display: flex;
-
-        .page-title{
-            display: flex;
-            height: 90px;
-            margin: 0 10px;
-            transition: ease-in-out .5s;
-            cursor: pointer;
-            &.selected{
-                border-bottom: solid 5px #6ff8fd;
-            }
-            &:hover{
-                background: #6ff8fd;
-            }
-            img{
-                width: 70px;
-            }
-            h2{
-                color: #fff;
-                font-family: @fonte;
-                font-size: 35px; 
-                align-self: center;
-                margin: 15px;
-            }
+        height: 70px;
+        padding: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+        &.selected{
+            background-color: rgba(0,0,0,0.1);
+        }
+        &:hover{
+            box-shadow: inset 0px -5px #6ff8fd;
+        }
+        img{
+            width: 70px;
+        }
+        h2{
+            color: #fff;
+            font-family: @fonte;
+            font-size: 35px; 
+            align-self: center;
+            margin: 15px;
         }
     }
 }

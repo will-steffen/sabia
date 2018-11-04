@@ -24,6 +24,8 @@ import { JobsPage } from 'src/pages/private/jobs/jobs.page';
 import { CameraPage } from 'src/pages/private/camera/camera.page';
 import { AngularMaterialModule } from './material/angular-material.module';
 import { FaceViewComponent } from 'src/components/face-view/face-view.component';
+import { NavigationHeaderComponent } from 'src/components/navigation-header/navigation-header.component';
+import { PageDetailHeaderComponent } from 'src/components/page-detail-header/page-detail-header.component';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { FaceViewComponent } from 'src/components/face-view/face-view.component'
     CourseDetailPage,
     CameraPage,
 
-    FaceViewComponent
+    FaceViewComponent,
+    NavigationHeaderComponent,
+    PageDetailHeaderComponent
   ],
   imports: [
     BrowserModule,
