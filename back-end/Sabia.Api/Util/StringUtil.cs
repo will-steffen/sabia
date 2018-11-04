@@ -9,7 +9,8 @@ namespace Sabia.Api.Util
     {
         public static string ToSlug(this string str)
         {
-            return Regex.Escape(str.Replace(' ', '-'));
+            return Regex.Escape(str.Replace(' ', '-').Replace('ç','c').Replace('ã','a').Replace('á','a')
+                .Replace('ó','o').Replace('é','e').Replace('â','a').Replace('ô','o'));
         }
     }
 }

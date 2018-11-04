@@ -23,7 +23,7 @@ namespace Sabia.Api.Controllers
         [HttpGet]
         public ActionResult<List<UserDTO>> GetAll()
         {
-            return userDataAccess.List().ToList().Select(x=>x.toDTO()).ToList();
+            return userDataAccess.GetList().ToList().Select(x=>x.toDTO()).ToList();
         }
 
         [HttpGet("{id}", Name = "GetUser")]

@@ -11,6 +11,8 @@ namespace Sabia.Api.DTOs
     {
         public string Title { get; set; }
 
+        public string Slug { get; set; }
+
         public string Description { get; set; }
 
         public string imagePath { get; set; }

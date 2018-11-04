@@ -1,4 +1,5 @@
 ﻿using Sabia.Api.DTOs;
+using Sabia.Api.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,6 +50,7 @@ namespace Sabia.Api.Model
             return new JobDTO
             {
                 Title = this.Title,
+                Slug = this.Title.ToSlug(),
                 Description = this.Description,
                 imagePath = this.imagePath,
                 UserId = this.UserId,

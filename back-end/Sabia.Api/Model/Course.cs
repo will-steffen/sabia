@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using System.Linq;
+using Sabia.Api.Util;
 
 namespace Sabia.Api.Model
 {
@@ -43,6 +44,7 @@ namespace Sabia.Api.Model
                 Id = this.Id,
                 RequiredCourseId = this.RequirementCourseId,
                 Name = this.Name,
+                Slug = this.Name.ToSlug(),
                 Description = this.Description,
                 ExpectedHours = this.ExpectedHours,
                 Classes = this.Classes.Select(x => x.ToDTO()).ToList(),

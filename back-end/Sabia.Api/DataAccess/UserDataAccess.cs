@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Sabia.Api.DataAccess
 {
@@ -20,6 +21,7 @@ namespace Sabia.Api.DataAccess
         {
             return Context.Set<User>().ToList().FirstOrDefault(x => x.Name.ToSlug() == slug);
         }
+
 
         public override void Save(User user)
         {
@@ -54,6 +56,11 @@ namespace Sabia.Api.DataAccess
             {
                 return false;
             }
+        }
+
+        public IEnumerable<User> GetList()
+        {
+            return Context.User.Include("CurrentJob").Include("Courses").Include("Courses.Course").Include("Courses.Course.Type");
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Sabia.Api.DTOs;
+using Sabia.Api.Util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +44,7 @@ namespace Sabia.Api.Model
                 Name = this.Name,
                 Username = this.Username,
                 Email = this.Email,
+                Slug = this.Name.ToSlug(),
                 WorkedHours = this.WorkedHours,
                 StudyHours = this.StudyHours,
                 TotalHour = this.TotalHour,
