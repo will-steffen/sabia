@@ -15,6 +15,7 @@ export const ApiRoute = {
         fininsh: basePath + '/job/FinishJob',        
     },
     course:{
-        base: basePath + '/course'
+        base: basePath + '/course',
+        assign: basePath + '/course/AttributeCourse'
     }
 };

@@ -24,4 +24,30 @@ export class CourseService {
             })
         });
     }
+
+    getCourse(slug: string) : Promise<any>{
+        return new Promise((resolve, reject) => {
+            let user = this.userService.getUser();
+            this.service.get(ApiRoute.course.base + '/' + slug +'/' + user.id).then(data => {         
+                resolve(Course.fromData(data));
+            }).catch(err => {
+                reject(err);
+            })
+        });
+    }
+
+    assign(course: Course) : Promise<any> {
+        return new Promise((resolve) => {
+            let user = this.userService.getUser();
+            this.service.post(ApiRoute.course.assign, {
+                UserId: user.id,
+                CourseId: course.id
+            }).then(data => {         
+                resolve();
+            }).catch(err => {
+                resolve();
+            })
+        });
+    }
 }
+
