@@ -23,6 +23,9 @@ export class Job extends BaseModel {
     estimatedHours: number;
     id: number;
     slug: string
+    extendedDescription: string;
+    money: number;
+    objective: string;
 
     static fromData(data) {
         let u = super.fromData(data);

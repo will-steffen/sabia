@@ -27,6 +27,7 @@ import { NavigationHeaderComponent } from 'src/components/navigation-header/navi
 import { PageDetailHeaderComponent } from 'src/components/page-detail-header/page-detail-header.component';
 import { CameraService } from 'src/services/camera.service';
 import { JobService } from 'src/services/job.service';
+import { CourseService } from 'src/services/course.service';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import { JobService } from 'src/services/job.service';
     AuthService,
     UserService,
     CameraService,
-    JobService
+    JobService,
+    CourseService
   ],
   bootstrap: [AppComponent]
 })

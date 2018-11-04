@@ -10,5 +10,8 @@ export const ApiRoute = {
     },
     job: {
         base: basePath + '/job'
+    },
+    course:{
+        base: basePath + '/course'
     }
 };
