@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { RouteConfig } from 'src/enums/route-config';
 import { CameraService } from 'src/services/camera.service';
 import { UserService } from 'src/services/user.service';
+import { User } from 'src/models/user';
 
 
 @Component({
@@ -11,11 +12,16 @@ import { UserService } from 'src/services/user.service';
     styleUrls: ['./navigation-header.component.less']
 })
 export class NavigationHeaderComponent {
+
+    user = new User();
+
     constructor(
         public router: Router, 
         public cameraService: CameraService,
         public userService: UserService
-    ) { }
+    ) { 
+        this.user = userService.getUser();
+    }
 
     openJobs() {
         this.router.navigate([RouteConfig.job]);
