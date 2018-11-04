@@ -24,9 +24,7 @@ export class FaceViewComponent implements OnInit {
   ) { }
 
   ngOnInit() { 
-      if(this.showCanvas){
-        this.canvas.nativeElement.style.display = 'block';
-      }
+      
   }
 
   ngAfterViewInit() {
