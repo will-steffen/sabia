@@ -18,6 +18,14 @@ namespace Sabia.Api.Model
         [StringLength(250)]
         public string Description { get; set; }
 
+        [StringLength(800)]
+        [DefaultValue("")]
+        public string ExtendedDescription { get; set; }
+
+        [StringLength(800)]
+        [DefaultValue("")]
+        public string Objective { get; set; }
+
         [StringLength(250)]
         public string imagePath { get; set; }
 
@@ -55,6 +63,8 @@ namespace Sabia.Api.Model
                 Title = this.Title,
                 Slug = this.Title.ToSlug(),
                 Description = this.Description,
+                ExtendedDescription = this.ExtendedDescription,
+                Objective = this.Objective,
                 imagePath = this.imagePath,
                 UserId = this.UserId,
                 UsedHours = this.UsedHours,

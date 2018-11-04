@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sabia.Api;
 
 namespace Sabia.Api.Migrations
 {
     [DbContext(typeof(SabiaContext))]
-    partial class SabiaContextModelSnapshot : ModelSnapshot
+    [Migration("20181104045126_extdesc")]
+    partial class extdesc
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
