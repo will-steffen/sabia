@@ -42,6 +42,7 @@ namespace Sabia.Api.DataAccess
             return JobDTO;
         }
 
+
         internal List<JobDTO> GetAll(string userId)
         {
             User user = userDataAccess.GetByIdOrSlug(userId);
@@ -78,6 +79,26 @@ namespace Sabia.Api.DataAccess
             else
             {
                 return GetBySlug(id.ToSlug());
+            }
+        }
+
+        internal bool AttributeJob(string userId, string jobId)
+        {
+            Job job = GetByIdOrSlug(jobId);
+            User user = userDataAccess.GetByIdOrSlug(userId);
+            if ((job.UserId.HasValue && job.UserId != user.Id) || user == null || job == null)
+            {
+                return false;
+            }
+            job.UserId = user.Id;
+            try
+            {
+                base.Save(job);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
             }
         }
 

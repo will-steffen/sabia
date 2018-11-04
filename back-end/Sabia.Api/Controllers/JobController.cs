@@ -32,6 +32,20 @@ namespace Sabia.Api.Controllers
             return jobDataAccess.GetAll(userId);
         }
 
+        [HttpPost("AttributeJob")]
+        public IActionResult AttributeJob([FromBody] AttributeJobDTO dto)
+        {
+            bool ok = jobDataAccess.AttributeJob(dto.UserId, dto.JobId);
+            if (ok)
+            {
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
         [HttpPost("Update")]
         public IActionResult Update([FromBody] UpdateJobDTO dto)
         {
