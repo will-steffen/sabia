@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sabia.Api;
 
 namespace Sabia.Api.Migrations
 {
     [DbContext(typeof(SabiaContext))]
-    partial class SabiaContextModelSnapshot : ModelSnapshot
+    [Migration("20181104000904_nullable-user-id-jobs")]
+    partial class nullableuseridjobs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -91,15 +93,10 @@ namespace Sabia.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("id");
 
-                    b.Property<string>("BaseCode")
-                        .HasColumnType("LONGTEXT");
-
                     b.Property<bool>("Completed");
 
                     b.Property<string>("Description")
                         .HasMaxLength(250);
-
-                    b.Property<float>("Money");
 
                     b.Property<long>("ReportedProgression");
 
@@ -109,9 +106,6 @@ namespace Sabia.Api.Migrations
                     b.Property<long>("UsedHours");
 
                     b.Property<long?>("UserId");
-
-                    b.Property<string>("VerificationCode")
-                        .HasColumnType("LONGTEXT");
 
                     b.Property<string>("imagePath")
                         .HasMaxLength(250);
@@ -152,19 +146,11 @@ namespace Sabia.Api.Migrations
                     b.Property<string>("Email")
                         .HasMaxLength(250);
 
-                    b.Property<float>("MoneyEarned");
-
                     b.Property<string>("Name")
                         .HasMaxLength(250);
 
-                    b.Property<float>("StudyHours");
-
-                    b.Property<float>("TotalHour");
-
                     b.Property<string>("Username")
                         .HasMaxLength(250);
-
-                    b.Property<float>("WorkedHours");
 
                     b.HasKey("Id");
 

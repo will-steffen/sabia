@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Sabia.Api;
 
 namespace Sabia.Api.Migrations
 {
     [DbContext(typeof(SabiaContext))]
-    partial class SabiaContextModelSnapshot : ModelSnapshot
+    [Migration("20181103212402_nullable-fks")]
+    partial class nullablefks
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -91,15 +93,10 @@ namespace Sabia.Api.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnName("id");
 
-                    b.Property<string>("BaseCode")
-                        .HasColumnType("LONGTEXT");
-
                     b.Property<bool>("Completed");
 
                     b.Property<string>("Description")
                         .HasMaxLength(250);
-
-                    b.Property<float>("Money");
 
                     b.Property<long>("ReportedProgression");
 
@@ -108,10 +105,7 @@ namespace Sabia.Api.Migrations
 
                     b.Property<long>("UsedHours");
 
-                    b.Property<long?>("UserId");
-
-                    b.Property<string>("VerificationCode")
-                        .HasColumnType("LONGTEXT");
+                    b.Property<long>("UserId");
 
                     b.Property<string>("imagePath")
                         .HasMaxLength(250);
@@ -152,19 +146,11 @@ namespace Sabia.Api.Migrations
                     b.Property<string>("Email")
                         .HasMaxLength(250);
 
-                    b.Property<float>("MoneyEarned");
-
                     b.Property<string>("Name")
                         .HasMaxLength(250);
 
-                    b.Property<float>("StudyHours");
-
-                    b.Property<float>("TotalHour");
-
                     b.Property<string>("Username")
                         .HasMaxLength(250);
-
-                    b.Property<float>("WorkedHours");
 
                     b.HasKey("Id");
 
@@ -179,15 +165,16 @@ namespace Sabia.Api.Migrations
 
                     b.Property<long>("CourseId");
 
-                    b.Property<float>("Progression");
+                    b.Property<long>("Progression");
 
-                    b.Property<float>("UsedHours");
+                    b.Property<long>("UsedHours");
 
                     b.Property<long>("UserId");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CourseId");
+                    b.HasIndex("CourseId")
+                        .IsUnique();
 
                     b.ToTable("UserCourses");
                 });
@@ -216,7 +203,8 @@ namespace Sabia.Api.Migrations
                 {
                     b.HasOne("Sabia.Api.Model.User", "UserDoingJob")
                         .WithOne("CurrentJob")
-                        .HasForeignKey("Sabia.Api.Model.Job", "UserId");
+                        .HasForeignKey("Sabia.Api.Model.Job", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Sabia.Api.Model.JobRequirement", b =>
@@ -240,8 +228,8 @@ namespace Sabia.Api.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Sabia.Api.Model.User", "User")
-                        .WithMany("Courses")
-                        .HasForeignKey("CourseId")
+                        .WithOne("Courses")
+                        .HasForeignKey("Sabia.Api.Model.UserCourse", "CourseId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

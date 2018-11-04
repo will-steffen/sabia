@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sabia.Api.DataAccess
 {
-    public class UserSkillDataAccess : BaseDataAccess<UserSkill>
+    public class CourseTypeDataAccess : BaseDataAccess<CourseType>
     {
-        public UserSkillDataAccess(SabiaContext ctx) : base(ctx) { }
+        public CourseTypeDataAccess(SabiaContext ctx) : base(ctx) { }
     }
 }

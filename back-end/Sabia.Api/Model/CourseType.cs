@@ -5,11 +5,13 @@ using System.Text;
 
 namespace Sabia.Api.Model
 {
-    public class Skill : BaseModel
+    public class CourseType : BaseModel
     {
         [StringLength(250)]
         public string Name { get; set; }
 
-        public virtual List<UserSkill> UserSkillList { get; set; }
+        public bool Basic { get; set; }
+
+        public virtual List<Course> Courses { get; set; }
     }
 }

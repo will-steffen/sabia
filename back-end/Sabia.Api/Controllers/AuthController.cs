@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Sabia.Api.DataAccess;
-using Sabia.Api.Dtos;
+using Sabia.Api.DTOs;
 using Sabia.Api.Model;
 
 namespace Sabia.Api.Controllers
@@ -28,7 +28,7 @@ namespace Sabia.Api.Controllers
             {
                 return NotFound();
             }
-            return new UserDTO(user);
+            return user.toDTO();
         }
 
         //[HttpGet]
