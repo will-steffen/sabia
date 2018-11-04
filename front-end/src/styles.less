@@ -80,19 +80,24 @@ background: #ccc;
         align-self: center;
         margin: 10px;
         label{
-            font-size: 12px;
+            font-size: 12px; 
         }
         b{
             font-size: 30px;
         }
     }
     a{
-        width: 40px;
+        display: flex;
+        align-self: center;
         height: auto;
         align-self: center;
         transition: ease-in-out .5s;
         cursor: pointer;
         margin: 20px;
+        font-family: @fonte;
+        color: #fff;
+        font-size: 20px;
+        align
         &:hover{
             opacity: .5;
         }
@@ -111,6 +116,9 @@ mat-panel-title{
 }
 mat-expansion-panel-header{
     border: 1px solid rgb(204, 204, 204);
+}
+.mat-chip-list-wrapper{
+    display: block!important;
 }
 header{
     background: @bluedark;
@@ -236,6 +244,9 @@ body{
 .mat-icon-button{
     background: transparent;
 }
+.mat-expansion-panel-body{
+    background: #eaeaea;
+}
 .jobs{
     display: block;
 
@@ -248,7 +259,7 @@ body{
         .nivel{
             font-family: @fonte;
             color: @bluedark;
-            padding: 0 10px;
+            padding: 10px;
             span{
                 padding: 10px;
             }
@@ -355,7 +366,7 @@ body{
         .nivel{
             font-family: @fonte;
             color: @bluedark;
-            padding: 0 10px;
+            padding: 10px;
             span{
                 padding: 10px;
             }

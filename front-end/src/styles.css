@@ -79,15 +79,22 @@
   font-size: 30px;
 }
 .profile a {
-  width: 40px;
+  display: flex;
   height: auto;
   align-self: center;
   transition: ease-in-out 0.5s;
   cursor: pointer;
   margin: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+  font-size: 20px;
 }
-.profile a:hover {
+align .profile a:hover {
   opacity: .5;
+}
+.profile a img {
+  height: 40px;
+  width: 40px;
 }
 .briefing {
   width: 60%;
@@ -98,6 +105,9 @@ mat-panel-title {
 }
 mat-expansion-panel-header {
   border: 1px solid #cccccc;
+}
+.mat-chip-list-wrapper {
+  display: block!important;
 }
 header {
   background: #2B8DBF;
@@ -217,6 +227,9 @@ body {
 .mat-icon-button {
   background: transparent;
 }
+.mat-expansion-panel-body {
+  background: #eaeaea;
+}
 .jobs {
   display: block;
 }
@@ -229,7 +242,7 @@ body {
 .jobs .curso .nivel {
   font-family: 'Roboto Condensed', sans-serif;
   color: #2B8DBF;
-  padding: 0 10px;
+  padding: 10px;
 }
 .jobs .curso .nivel span {
   padding: 10px;
@@ -331,7 +344,7 @@ body {
 .lista-cursos .curso .nivel {
   font-family: 'Roboto Condensed', sans-serif;
   color: #2B8DBF;
-  padding: 0 10px;
+  padding: 10px;
 }
 .lista-cursos .curso .nivel span {
   padding: 10px;
