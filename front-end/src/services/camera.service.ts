@@ -5,7 +5,7 @@ export class CameraService {
 
     hasFace = false;
     showMiniCamera = false;
-    onLoop = true;
+    onLoop = false;
 
     constructor( ) { } 
 

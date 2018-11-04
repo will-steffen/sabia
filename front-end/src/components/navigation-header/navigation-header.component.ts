@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { RouteConfig } from 'src/enums/route-config';
+import { CameraService } from 'src/services/camera.service';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { RouteConfig } from 'src/enums/route-config';
     styleUrls: ['./navigation-header.component.less']
 })
 export class NavigationHeaderComponent {
-    constructor(public router: Router) { }
+    constructor(public router: Router, public cameraService: CameraService) { }
 
     openJobs() {
         this.router.navigate([RouteConfig.job]);
