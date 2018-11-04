@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { RouteConfig } from 'src/enums/route-config';
 import { CameraService } from 'src/services/camera.service';
+import { UserService } from 'src/services/user.service';
 
 
 @Component({
@@ -10,7 +11,11 @@ import { CameraService } from 'src/services/camera.service';
     styleUrls: ['./navigation-header.component.less']
 })
 export class NavigationHeaderComponent {
-    constructor(public router: Router, public cameraService: CameraService) { }
+    constructor(
+        public router: Router, 
+        public cameraService: CameraService,
+        public userService: UserService
+    ) { }
 
     openJobs() {
         this.router.navigate([RouteConfig.job]);
@@ -26,6 +31,11 @@ export class NavigationHeaderComponent {
 
     isJobsActive() {
         return window.location.pathname.indexOf(RouteConfig.job) > 0;
+    }
+
+    logout() {
+        this.userService.logout();
+        this.router.navigate([RouteConfig.login]);
     }
 
 }

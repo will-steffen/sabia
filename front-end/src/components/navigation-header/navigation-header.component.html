@@ -30,7 +30,7 @@
             <img src="assets/img/camera.svg" *ngIf="!cameraService.showMiniCamera" />
             <img src="assets/img/camera-no.svg" *ngIf="cameraService.showMiniCamera" />
         </a>  
-        <a>
+        <a (click)="logout()">
             <img src="assets/img/user.svg" />
             <label>Luis Fernando</label>
         </a>

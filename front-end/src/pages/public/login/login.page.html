@@ -1,4 +1,16 @@
-
-username <input [(ngModel)]="info.Username"> <br>
-password <input [(ngModel)]="info.Password"> <br>
-<button (click)="login()">Entrar</button><br>
+<div class="page">
+    <div class="box">
+        <div class="img">
+            <img src="assets/img/logo.svg">
+        </div>
+        <div class="inp-grp">
+            <label>Usuário</label><br>
+            <input [(ngModel)]="info.Username" (keydown.enter)="login()">
+        </div>
+        <div class="inp-grp">
+            <label>Senha</label><br>
+            <input [(ngModel)]="info.Password" type="password" (keydown.enter)="login()">
+        </div>
+        <button (click)="login()">Entrar</button>
+    </div>
+</div>

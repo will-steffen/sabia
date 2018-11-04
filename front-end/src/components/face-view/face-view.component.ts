@@ -29,9 +29,9 @@ export class FaceViewComponent implements OnInit {
         this.video.nativeElement.play();
       });
     }
-    if(!this.cameraService.onLoop){
-      this.cameraService.onLoop = true;
-      this.capture();
+    if(!this.cameraService.onLoop){  
+      // this.cameraService.onLoop = true;
+      // this.capture();
     }
     
   }
