@@ -58,6 +58,36 @@
 .lista li a b {
   align-self: center;
 }
+.profile {
+  display: flex;
+}
+.profile .saldo-dinheiro,
+.profile .saldo-horas {
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+  align-self: center;
+  margin: 10px;
+}
+.profile .saldo-dinheiro label,
+.profile .saldo-horas label {
+  font-size: 12px;
+}
+.profile .saldo-dinheiro b,
+.profile .saldo-horas b {
+  font-size: 30px;
+}
+.profile a {
+  width: 40px;
+  height: auto;
+  align-self: center;
+  transition: ease-in-out 0.5s;
+  cursor: pointer;
+  margin: 20px;
+}
+.profile a:hover {
+  opacity: .5;
+}
 .briefing {
   width: 60%;
   margin: 0 auto;
@@ -71,19 +101,28 @@ mat-expansion-panel-header {
 header {
   background: #2B8DBF;
   display: flex;
+  justify-content: space-between;
 }
-header .page-title {
+header .menu {
+  display: flex;
+}
+header .menu .page-title {
   display: flex;
   height: 90px;
   margin: 0 10px;
+  transition: ease-in-out 0.5s;
+  cursor: pointer;
 }
-header .page-title.selected {
+header .menu .page-title.selected {
   border-bottom: solid 5px #6ff8fd;
 }
-header .page-title img {
+header .menu .page-title:hover {
+  background: #6ff8fd;
+}
+header .menu .page-title img {
   width: 70px;
 }
-header .page-title h2 {
+header .menu .page-title h2 {
   color: #fff;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 35px;
@@ -108,11 +147,13 @@ body {
   background: #4CB9E2;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
 }
 .footer {
-  display: flex;
-  justify-content: center;
   padding: 2%;
+  display: flex;
+  justify-content: flex-end;
 }
 .footer a {
   margin: 10px;
@@ -129,11 +170,12 @@ body {
   width: 100%;
   height: auto;
   padding: 1% 0;
-}
-.logo img {
-  width: 200px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 .buttons {
+  flex: 1;
   display: flex;
   justify-content: center;
 }
@@ -167,6 +209,42 @@ body {
 }
 .mat-icon-button {
   background: transparent;
+}
+.jobs {
+  display: block;
+  background: #fff;
+}
+.jobs .curso {
+  display: flex;
+  width: 100%;
+  max-width: unset;
+}
+.jobs .curso .duracao {
+  z-index: 2;
+  display: flex;
+  background: #2B8DBF;
+  padding: 5px;
+  font-size: 18px;
+  margin-top: -5px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 800;
+  color: #fff;
+}
+.jobs .curso .duracao img {
+  width: 20px;
+  height: 18px;
+}
+.jobs .curso .duracao span {
+  margin-right: 5px;
+  font-size: 23px;
+}
+.jobs .curso h3 {
+  display: block;
+  float: none;
+  padding: 10px;
+}
+.jobs .curso p {
+  padding: 10px;
 }
 .lista-cursos {
   display: flex;

@@ -73,6 +73,33 @@ background: #ccc;
         }
     }
 }
+.profile{
+    display: flex;
+    .saldo-dinheiro, .saldo-horas{
+        display: flex;
+        flex-direction: column;
+        color: #FFF;
+        align-self: center;
+        margin: 10px;
+        label{
+            font-size: 12px;
+        }
+        b{
+            font-size: 30px;
+        }
+    }
+    a{
+        width: 40px;
+        height: auto;
+        align-self: center;
+        transition: ease-in-out .5s;
+        cursor: pointer;
+        margin: 20px;
+        &:hover{
+            opacity: .5;
+        }
+    }
+}
 .briefing{
     width: 60%;
     margin: 0 auto;
@@ -86,22 +113,32 @@ mat-expansion-panel-header{
 header{
     background: @bluedark;
     display: flex;
-    .page-title{
+    justify-content: space-between;
+    .menu{
         display: flex;
-        height: 90px;
-        margin: 0 10px;
-        &.selected{
-            border-bottom: solid 5px #6ff8fd;
-        }
-        img{
-            width: 70px;
-        }
-        h2{
-            color: #fff;
-            font-family: @fonte;
-            font-size: 35px; 
-            align-self: center;
-            margin: 15px;
+
+        .page-title{
+            display: flex;
+            height: 90px;
+            margin: 0 10px;
+            transition: ease-in-out .5s;
+            cursor: pointer;
+            &.selected{
+                border-bottom: solid 5px #6ff8fd;
+            }
+            &:hover{
+                background: #6ff8fd;
+            }
+            img{
+                width: 70px;
+            }
+            h2{
+                color: #fff;
+                font-family: @fonte;
+                font-size: 35px; 
+                align-self: center;
+                margin: 15px;
+            }
         }
     }
 }
@@ -190,7 +227,45 @@ body{
 .mat-icon-button{
     background: transparent;
 }
+.jobs{
+    display: block;
+    background: #fff;
+    .curso{
+        display: flex;
+        width: 100%;
+        max-width: unset;
 
+        .duracao{
+            z-index: 2;
+            display: flex;
+            background: @bluedark;
+            padding: 5px;
+            font-size: 18px;
+            margin-top: -5px;
+            font-family: @fonte;
+            font-weight: 800;
+            color: #fff;
+            img{
+                width: 20px;
+                height: 18px;
+            }
+            span{
+                margin-right: 5px;
+                font-size: 23px;
+            }
+        }
+
+        h3{
+            display: block;
+            float: none;
+            padding: 10px;
+            margin: 0;
+        p{
+            padding: 10px;
+        }
+    } 
+
+}
 .lista-cursos{
     display: flex;
     overflow: auto;
