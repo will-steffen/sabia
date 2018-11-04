@@ -39,9 +39,22 @@ namespace Sabia.Api.Model
         {
             return new UserDTO
             {
+                Id = this.Id,
                 Name = this.Name,
                 Username = this.Username,
-                Email = this.Email
+                Email = this.Email,
+                WorkedHours = this.WorkedHours,
+                StudyHours = this.StudyHours,
+                TotalHour = this.TotalHour,
+                MoneyEarned = this.MoneyEarned,
+                CurrentJobName = this.CurrentJob?.Title ?? "",
+                Courses = this.Courses
+                .Where(x=>x.Progression >= 100 && !x.Course.Type.Basic)
+                .GroupBy(x=>x.Course.Type.Name).Select(x=> new UserCourseTypeDTO
+                {
+                    CourseTypeName = x.Key,
+                    Level = x.Max(y=>(int)y.Course.Level)
+                }).ToList()
             };
         }
 

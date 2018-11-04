@@ -28,7 +28,9 @@ namespace Sabia.Api.Controllers
             {
                 return NotFound();
             }
-            return user.toDTO();
+            var dto =  user.toDTO();
+            dto.Courses = null;
+            return dto;
         }
 
         //[HttpGet]

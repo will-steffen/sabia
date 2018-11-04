@@ -16,7 +16,7 @@ namespace Sabia.Api.Model
 
         public long UserId { get; set; }
 
-        [ForeignKey("CourseId")]
+        [ForeignKey("UserId")]
         [InverseProperty("Courses")]
         public virtual User User { get; set; }
 

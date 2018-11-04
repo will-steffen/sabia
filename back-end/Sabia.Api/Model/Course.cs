@@ -20,11 +20,11 @@ namespace Sabia.Api.Model
 
         public long CourseTypeId { get; set; }
 
-        public virtual List<CourseClass> Classes { get; set; }
-
         [ForeignKey("CourseTypeId")]
         [InverseProperty("Courses")]
         public virtual CourseType Type { get; set; }
+
+        public virtual List<CourseClass> Classes { get; set; }
 
         public Level Level { get; set; }
 
