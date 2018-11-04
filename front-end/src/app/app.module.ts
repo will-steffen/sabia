@@ -26,6 +26,7 @@ import { FaceViewComponent } from 'src/components/face-view/face-view.component'
 import { NavigationHeaderComponent } from 'src/components/navigation-header/navigation-header.component';
 import { PageDetailHeaderComponent } from 'src/components/page-detail-header/page-detail-header.component';
 import { CameraService } from 'src/services/camera.service';
+import { JobService } from 'src/services/job.service';
 
 
 @NgModule({
@@ -61,7 +62,8 @@ import { CameraService } from 'src/services/camera.service';
 
     AuthService,
     UserService,
-    CameraService
+    CameraService,
+    JobService
   ],
   bootstrap: [AppComponent]
 })

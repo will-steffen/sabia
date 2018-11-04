@@ -31,8 +31,8 @@
             <img src="assets/img/camera-no.svg" *ngIf="cameraService.showMiniCamera" />
         </a>  
         <a (click)="logout()">
-            <img src="assets/img/user.png" />
-            <label>Luis Fernando</label>
+            <img src="assets/img/user.svg" />
+            <label>{{ user.name }}</label>
         </a>
     </div>
 </header>
