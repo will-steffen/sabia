@@ -88,10 +88,15 @@ header{
     display: flex;
     .page-title{
         display: flex;
-        height: 90px;
-        margin: 0 10px;
+        height: 70px;
+        padding: 10px;
+        transition: 0.3s;
+        cursor: pointer;
         &.selected{
-            border-bottom: solid 5px #6ff8fd;
+            background-color: rgba(0,0,0,0.1);
+        }
+        &:hover{
+            box-shadow: inset 0px -5px #6ff8fd;
         }
         img{
             width: 70px;
