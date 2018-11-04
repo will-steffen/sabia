@@ -17,6 +17,10 @@ namespace Sabia.Api.DTOs
 
         public string Description { get; set; }
 
+        public string ExtendedDescription { get; set; }
+
+        public string Objective { get; set; }
+
         public string imagePath { get; set; }
 
         public long? UserId { get; set; }
