@@ -1,13 +1,4 @@
-<div id="app">
-    <div><video #video id="video" width="640" height="480" autoplay [style.display]="'none'"></video></div>
-    <!-- <div><button id="snap" (click)="capture()" >Snap Photo</button></div> -->
-    <canvas #canvas id="canvas" width="640" height="480" 
-    [style.display]="showCanvas ? 'block' : 'none'"
-    ></canvas>
-    <!-- <div class="tem" *ngIf="hasFace">
-        Tem !
-    </div>
-    <div class="naotem" *ngIf="!hasFace">
-        Não tem
-    </div> -->
+<div>
+    <video #video id="video" width="640" height="480" autoplay></video>
 </div>
+<canvas #canvas id="canvas" width="640" height="480"></canvas>

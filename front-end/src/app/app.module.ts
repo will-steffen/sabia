@@ -21,11 +21,11 @@ import { CourseDetailPage } from 'src/pages/private/course-detail/course-detail.
 import { CoursesPage } from 'src/pages/private/courses/courses.page';
 import { JobDetailPage } from 'src/pages/private/job-detail/job-detail.page';
 import { JobsPage } from 'src/pages/private/jobs/jobs.page';
-import { CameraPage } from 'src/pages/private/camera/camera.page';
 import { AngularMaterialModule } from './material/angular-material.module';
 import { FaceViewComponent } from 'src/components/face-view/face-view.component';
 import { NavigationHeaderComponent } from 'src/components/navigation-header/navigation-header.component';
 import { PageDetailHeaderComponent } from 'src/components/page-detail-header/page-detail-header.component';
+import { CameraService } from 'src/services/camera.service';
 
 
 @NgModule({
@@ -39,7 +39,6 @@ import { PageDetailHeaderComponent } from 'src/components/page-detail-header/pag
     JobDetailPage,
     CoursesPage,
     CourseDetailPage,
-    CameraPage,
 
     FaceViewComponent,
     NavigationHeaderComponent,
@@ -61,7 +60,8 @@ import { PageDetailHeaderComponent } from 'src/components/page-detail-header/pag
     AlertHandler,
 
     AuthService,
-    UserService
+    UserService,
+    CameraService
   ],
   bootstrap: [AppComponent]
 })
