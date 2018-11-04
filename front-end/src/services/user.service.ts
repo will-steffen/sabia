@@ -10,14 +10,14 @@ import { AuthInfo } from 'src/models/view/auth-info';
 export class UserService {
 
     constructor(
-        private service: ServiceHandler, 
+        private service: ServiceHandler,
         private storage: StorageHandler
-    ) { } 
+    ) { }
 
-    getUser() : User {
+    getUser(): User {
         let l = this.storage.list(Table.USER);
-        if(l.length == 0) return null;
-        return User.fromData(l[0]);        
+        if (l.length == 0) return null;
+        return User.fromData(l[0]);
     }
 
     logout() {
@@ -27,6 +27,20 @@ export class UserService {
     saveUser(user: User) {
         this.logout();
         this.storage.save(Table.USER, user);
-    }    
+    }
+
+    refreshUser(): Promise<any> {
+        return new Promise(res => {
+            let user = this.getUser();
+            this.service.get(ApiRoute.user.base + '/' + user.id).then(data => {
+                user = User.fromData(data);
+                this.logout();
+                this.saveUser(user);
+            })
+            .catch(err => console.log(err))
+            .then(() => res());
+        });
+
+    }
 
 }

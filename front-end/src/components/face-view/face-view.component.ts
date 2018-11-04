@@ -19,7 +19,6 @@ export class FaceViewComponent implements OnInit {
   ) { }
 
   ngOnInit() { 
-      
   }
 
   ngAfterViewInit() {

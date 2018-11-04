@@ -48,4 +48,18 @@ export class JobService {
             })
         });
     }
+
+    close(job) {
+        return new Promise((resolve, reject) => {
+            let user = this.userService.getUser();
+            this.service.post(ApiRoute.job.fininsh, {
+                UserId: user.id,
+                JobId: job.id
+            }).then(data => {
+                resolve();
+            }).catch(err => {
+                reject(err);
+            })
+        });
+    }
 }

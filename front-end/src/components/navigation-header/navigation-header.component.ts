@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RouteConfig } from 'src/enums/route-config';
 import { CameraService } from 'src/services/camera.service';
@@ -11,7 +11,7 @@ import { User } from 'src/models/user';
     templateUrl: './navigation-header.component.html',
     styleUrls: ['./navigation-header.component.less']
 })
-export class NavigationHeaderComponent {
+export class NavigationHeaderComponent implements OnInit{
 
     user = new User();
 
@@ -21,6 +21,11 @@ export class NavigationHeaderComponent {
         public userService: UserService
     ) { 
         this.user = userService.getUser();
+    }
+
+    ngOnInit() {
+        this.userService.refreshUser()
+        .then(() => {this.user = this.userService.getUser()})       
     }
 
     openJobs() {
@@ -42,6 +47,10 @@ export class NavigationHeaderComponent {
     logout() {
         this.userService.logout();
         this.router.navigate([RouteConfig.login]);
+    }
+
+    toCUrrency(n) {
+        return n.toFixed(2).replace('.', ',');
     }
 
 }

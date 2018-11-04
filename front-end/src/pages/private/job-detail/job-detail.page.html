@@ -1,19 +1,45 @@
 <app-navigation-header></app-navigation-header>
 <section *ngIf="job">
-    <app-page-detail-header 
-    [title]="job.title" 
-    [description]="job.description"
-    [onActionButton]="onActionButton"
-    [actionContext]="this"
-    [actionButton]="actionButton"
-></app-page-detail-header>
+    <div class="container">
+        <div class="left">
+            <div class="breadcrumb">
+                <!-- <a>Cursos</a><img src="assets/img/right-arrow.png" /><a>Meus Cursos</a> -->
+            </div>
+
+            <h2>{{ job.title }}</h2>
+            <div class="description">{{ job.description }}</div>
+            <div class="example-button-row">
+
+                
+
+                <button mat-raised-button color="primary" *ngIf="!jobIsMine" 
+                (click)="assign()">Assumir este Trabalho</button>
+
+                <button mat-raised-button color="primary" *ngIf="jobIsMine" 
+                (click)="selectFiles()">Submeter Arquivos</button>
+
+                <input type="file" placeholder="Selecione o arquivo" #files style="display: none">
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="video">
+                <video width="100%" height="auto" controls>
+                    <source src="assets/videos/dummy-video.mp4" type="video/mp4">
+                    <!-- <source src="assets/videos/movie.ogg" type="video/ogg"> -->
+                </video>
+            </div>
+        </div>
+    </div>
 
     <div class="briefing">
         <h4>Objetivo</h4>
         <div [innerHTML]="job.objective"></div>
 
         <h4>Requisitos</h4>
-        <ul> <li *ngFor="let req of job.requirements"> {{ req.courseName }} </li> </ul>
+        <ul>
+            <li *ngFor="let req of job.requirements"> {{ req.courseName }} </li>
+        </ul>
 
         <h4>Informações Técnicas</h4>
         <ul class="info-tecnica">
@@ -22,7 +48,7 @@
             <li><img src="assets/img/key.png" /><i>Senha:</i> desen@038897</li>
         </ul>
 
-        <h4>Descrição</h4> 
+        <h4>Descrição</h4>
         <div [innerHTML]="job.extendedDescription"></div>
 
         <h4>Anexos</h4>

@@ -7,8 +7,10 @@
         <h2>{{ title }}</h2>
         <div class="description">{{ description }}</div>
         <div class="example-button-row">
-            <button mat-raised-button color="primary" *ngIf="actionButton"
+            <input type="file" placeholder="Selecione o arquivo">
+            <button mat-raised-button color="primary" *ngIf="actionButton" 
             (click)="callAction()">{{ actionButton }}</button>
+
         </div>
     </div>
     <div class="right">

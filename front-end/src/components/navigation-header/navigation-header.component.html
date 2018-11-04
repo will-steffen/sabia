@@ -19,11 +19,11 @@
         </div>
         <div class="saldo-dinheiro">
             <label>Minha Carteira</label>
-            <b>R$226,23</b>
+            <b>R$ {{ toCUrrency(user.moneyEarned) }}</b>
         </div>
         <div class="saldo-horas">
             <label>Banco de Horas</label>
-            <b>20h</b>
+            <b>{{ user.totalHour }}h</b>
         </div>
         <a 
         (click)="cameraService.showMiniCamera = !cameraService.showMiniCamera">
