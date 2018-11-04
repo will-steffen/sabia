@@ -1,11 +1,29 @@
 <header>
-    <div class="page-title" (click)="openCourses()" [class.selected]="isCoursesActive()">
-        <img src="assets/img/online-course.svg" />
-        <h2>Cursos</h2>
+    <div class="menu">
+        <div class="page-title" (click)="openCourses()" [class.selected]="isCoursesActive()">
+            <img src="assets/img/online-course.svg"/> <h2>Cursos</h2>
+        </div>
+        <div class="page-title" (click)="openJobs()" [class.selected]="isJobsActive()">
+            <img src="assets/img/interview.svg"/> <h2>Trabalhos</h2>
+        </div>
     </div>
-    <div class="page-title" (click)="openJobs()" [class.selected]="isJobsActive()">
-        <img src="assets/img/interview.svg" />
-        <h2>Trabalhos</h2>
+    
+
+    <div class="profile">
+        <div class="saldo-dinheiro">
+            <label>Minha Carteira</label>
+            <b>R$226,23</b>
+        </div>
+        <div class="saldo-horas">
+            <label>Banco de Horas</label>
+            <b>20h</b>
+        </div>
+        <a>
+            <img src="assets/img/user.svg"/>
+        </a>
+        <a>
+            <img src="assets/img/icon.svg"/>
+        </a>
     </div>
 </header>
 <div class="camera">

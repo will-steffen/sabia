@@ -108,19 +108,13 @@ header .menu {
 }
 header .menu .page-title {
   display: flex;
-  height: 90px;
-  margin: 0 10px;
-  transition: ease-in-out 0.5s;
+  transition: 0.3s;
   cursor: pointer;
-}
-header .menu .page-title.selected {
-  border-bottom: solid 5px #6ff8fd;
-}
-header .menu .page-title:hover {
-  background: #6ff8fd;
 }
 header .menu .page-title img {
   width: 70px;
+  height: 70px;
+  margin: 7px;
 }
 header .menu .page-title h2 {
   color: #fff;
@@ -128,6 +122,12 @@ header .menu .page-title h2 {
   font-size: 35px;
   align-self: center;
   margin: 15px;
+}
+header .menu .page-title.selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+header .menu .page-title:hover {
+  box-shadow: inset 0px -5px #6ff8fd;
 }
 h2 {
   margin: 0;
@@ -212,12 +212,12 @@ body {
 }
 .jobs {
   display: block;
-  background: #fff;
 }
 .jobs .curso {
   display: flex;
   width: 100%;
   max-width: unset;
+  margin-bottom: 10px;
 }
 .jobs .curso .duracao {
   z-index: 2;
@@ -242,9 +242,13 @@ body {
   display: block;
   float: none;
   padding: 10px;
+  margin: 0;
 }
 .jobs .curso p {
   padding: 10px;
+}
+.jobs .curso .infos {
+  background: #fff;
 }
 .lista-cursos {
   display: flex;
