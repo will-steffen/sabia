@@ -46,6 +46,22 @@ namespace Sabia.Api.Controllers
             }
         }
 
+        [HttpPost("FinishJob")]
+        public IActionResult FinishJob([FromBody] FinishJobDTO dto)
+        {
+            bool ok = jobDataAccess.FinishJob(dto.UserId, dto.JobId);
+            if (ok)
+            {
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+
+
         [HttpPost("Update")]
         public IActionResult Update([FromBody] UpdateJobDTO dto)
         {
