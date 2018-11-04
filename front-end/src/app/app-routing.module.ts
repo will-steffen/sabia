@@ -10,7 +10,6 @@ import { JobsPage } from 'src/pages/private/jobs/jobs.page';
 import { CoursesPage } from 'src/pages/private/courses/courses.page';
 import { CourseDetailPage } from 'src/pages/private/course-detail/course-detail.page';
 import { JobDetailPage } from 'src/pages/private/job-detail/job-detail.page';
-import { CameraPage } from 'src/pages/private/camera/camera.page';
 
 const routes: Routes = [
     { path: RouteConfig.login, component: LoginPage, canActivate: [AuthService] },
@@ -20,8 +19,7 @@ const routes: Routes = [
             {path: RouteConfig.job, component: JobsPage},
             {path: RouteConfig.job + '/:slug', component: JobDetailPage},
             {path: RouteConfig.course, component: CoursesPage},
-            {path: RouteConfig.course + '/:slug', component: CourseDetailPage},
-            {path: RouteConfig.camera, component: CameraPage},
+            {path: RouteConfig.course + '/:slug', component: CourseDetailPage}
         ] 
     },
     { path: '**', redirectTo: '' }

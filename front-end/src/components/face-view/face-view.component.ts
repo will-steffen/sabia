@@ -1,6 +1,7 @@
 import { Component, ViewChild, ElementRef, OnInit, Input } from '@angular/core';
 import { ServiceHandler } from 'src/handlers/service.handler';
 import { NgBlockUI, BlockUI } from 'ng-block-ui';
+import { CameraService } from 'src/services/camera.service';
 
 
 @Component({
@@ -11,16 +12,10 @@ import { NgBlockUI, BlockUI } from 'ng-block-ui';
 export class FaceViewComponent implements OnInit {
   @ViewChild("video") video: ElementRef;
   @ViewChild("canvas") canvas: ElementRef;
-  hasFace = false;
-  @BlockUI() blockUI: NgBlockUI;
-
-  @Input() showCanvas = false;
-  @Input() showBlock = false;
-  @Input() onResult = function(result: boolean){};
-  @Input() onRequest = function(){};
   
   constructor(
-    public service: ServiceHandler
+    public service: ServiceHandler,
+    public cameraService: CameraService
   ) { }
 
   ngOnInit() { 
@@ -34,28 +29,24 @@ export class FaceViewComponent implements OnInit {
         this.video.nativeElement.play();
       });
     }
-    this.capture();
+    if(!this.cameraService.onLoop){
+      this.cameraService.onLoop = true;
+      this.capture();
+    }
+    
   }
 
-  capture() {
-    // this.canvas.nativeElement.style.display = 'none';
+  capture() {    
+    if(!this.cameraService.onLoop) return;
     const context = this.canvas.nativeElement.getContext("2d");
     context.clearRect(0, 0, 640, 480);
     context.drawImage(this.video.nativeElement, 0, 0, 640, 480);
     let url = this.canvas.nativeElement.toDataURL("image/png");
-    let blob = this.makeblob(url);
-    if(this.showBlock) this.blockUI.start();
-    this.onRequest();
+    let blob = this.makeblob(url);   
+    
     this.service.analyseImage(blob).then(data => {
-      // console.log(data);
-      // let faceRectangle = {
-      //   height: 201,
-      //   left: 292,
-      //   top: 278,
-      //   width: 223
-      // };
       if(data.length > 0){
-        this.hasFace = true;
+        this.cameraService.hasFace = true;
         for(let i = 0; i < data.length; i++){
           let f = data[i].faceRectangle;
           context.beginPath();
@@ -66,11 +57,8 @@ export class FaceViewComponent implements OnInit {
           context.stroke();
         }
       }else{
-        this.hasFace = false;
-      }  
-      this.onResult(this.hasFace);
-      // this.canvas.nativeElement.style.display = 'block';
-      if(this.showBlock) this.blockUI.stop();
+        this.cameraService.hasFace = false;
+      }
       setTimeout(() => this.capture(), 3000);
     });
     //this.captures.push(this.canvas.nativeElement.toDataURL("image/png"));
