@@ -81,6 +81,26 @@ namespace Sabia.Api.DataAccess
             }
         }
 
+        internal bool AttributeJob(string userId, string jobId)
+        {
+            Job job = GetByIdOrSlug(jobId);
+            User user = userDataAccess.GetByIdOrSlug(userId);
+            if ((job.UserId.HasValue && job.UserId != user.Id) || user == null || job == null)
+            {
+                return false;
+            }
+            job.UserId = user.Id;
+            try
+            {
+                base.Save(job);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         internal bool Update(string UserId, string JobId, long UsedHours, long ReportedProgression, bool Completed)
         {
             Job job = GetByIdOrSlug(JobId);

@@ -58,6 +58,18 @@ namespace Sabia.Api.Controllers
             }
         }
 
-
+        [HttpPost("AttributeCourse")]
+        public IActionResult AttributeCourse([FromBody] CourseAssignRequestDTO dto)
+        {
+            bool ok = courseDataAccess.AttributeCourse(dto.UserId, dto.CourseId);
+            if (ok)
+            {
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
     }
 }

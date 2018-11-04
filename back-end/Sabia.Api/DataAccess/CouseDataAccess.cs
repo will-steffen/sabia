@@ -61,6 +61,27 @@ namespace Sabia.Api.DataAccess
             return course;
         }
 
+        internal bool AttributeCourse(string userId, string courseId)
+        {
+            User user = userDataAccess.GetByIdOrSlug(userId);
+            Course course = GetByIdOrSlug(courseId);
+            if (user == null || course == null)
+            {
+                return false;
+            }
+            UserCourse userCourse = Context.Set<UserCourse>().FirstOrDefault(x => x.UserId == user.Id && x.CourseId == course.Id)
+                ?? new UserCourse { UserId = user.Id, CourseId = course.Id };
+            try
+            {
+                userCourseDataAccess.Save(userCourse);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
         internal List<CourseDTO> GetAll(string userId)
         {
             User user = userDataAccess.GetByIdOrSlug(userId);
@@ -72,6 +93,7 @@ namespace Sabia.Api.DataAccess
                 course.UsedUsedHours = UserCourse?.UsedHours ?? 0;
                 course.UserProgression = UserCourse?.Progression ?? 0;
                 course.UserCompleted = (UserCourse != null) ? UserCourse?.Progression >= 100 : false;
+                course.CourseAssigned = (UserCourse != null);
                 if (course.RequiredCourseId.HasValue)
                 {
                     course.UserMeetRequirement = (UserRequiredCourse != null) ? UserRequiredCourse.Progression >= 100 : false;

@@ -37,5 +37,7 @@ namespace Sabia.Api.DTOs
 
         public bool UserCompleted { get; set; }
 
+        public bool CourseAssigned { get; set; }
+
     }
 }
