@@ -25,6 +25,7 @@ import { CameraPage } from 'src/pages/private/camera/camera.page';
 import { AngularMaterialModule } from './material/angular-material.module';
 import { FaceViewComponent } from 'src/components/face-view/face-view.component';
 import { NavigationHeaderComponent } from 'src/components/navigation-header/navigation-header.component';
+import { PageDetailHeaderComponent } from 'src/components/page-detail-header/page-detail-header.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { NavigationHeaderComponent } from 'src/components/navigation-header/navi
     CameraPage,
 
     FaceViewComponent,
-    NavigationHeaderComponent
+    NavigationHeaderComponent,
+    PageDetailHeaderComponent
   ],
   imports: [
     BrowserModule,
