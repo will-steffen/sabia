@@ -31,8 +31,7 @@ export class JobsPage implements OnInit {
     this.jobService.getJobs()
       .then(jobs => {
         this.myJobs = jobs.filter(x => x.userId == user.id);
-        this.availableJobs = jobs.filter(x => x.userId != user.id);
-        console.log(jobs);
+        this.availableJobs = jobs.filter(x => x.userId == null);
       })
       .then(err => console.log(err))
       .then(() => this.blockUI.stop());

@@ -1,4 +1,6 @@
 <div>
-    <video #video id="video" width="640" height="480" autoplay [style.display]="'none'"></video>
+    <video #video id="face-video" width="640" height="480" autoplay 
+    [style.display]="cameraService.showStream ? '' : 'none'"></video>
 </div>
-<canvas #canvas id="canvas" width="640" height="480"></canvas>
+<input type="checkbox" [(ngModel)]="cameraService.showStream"> Mostrar Stream
+<canvas #canvas id="face-canvas" width="640" height="480"></canvas>

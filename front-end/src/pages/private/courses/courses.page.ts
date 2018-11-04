@@ -28,7 +28,6 @@ export class CoursesPage implements OnInit {
       .then(courses => {
         this.myCourses = courses.filter(x => x.courseAssigned);
         this.availableCourses = courses.filter(x => !x.courseAssigned);
-        console.log(this.myCourses);
       })
       .catch(err => console.log(err))
       .then(() =>this.blockUI.stop());
