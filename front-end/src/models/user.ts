@@ -5,4 +5,6 @@ export class User extends BaseModel {
     name: string;
     username: string;
     email: string;
+    moneyEarned: number;
+    totalHour: number;
 }
