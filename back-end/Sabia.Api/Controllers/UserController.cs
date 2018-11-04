@@ -4,8 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Sabia.Api.DataAccess;
+using Sabia.Api.DTOs;
 using Sabia.Api.Model;
-using Sabia.Api.Dtos;
+using Sabia.Api.DTOs;
 
 namespace Sabia.Api.Controllers
 {
@@ -21,41 +22,55 @@ namespace Sabia.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<User>> GetAll()
+        public ActionResult<List<UserDTO>> GetAll()
         {
-            return userDataAccess.List().ToList();
+            return userDataAccess.List().ToList().Select(x=>x.toDTO()).ToList();
         }
 
         [HttpGet("{id}", Name = "GetUser")]
-        public ActionResult<User> GetById(long id)
+        public ActionResult<UserDTO> GetById(string id)
         {
-            var item = userDataAccess.GetById(id);
+            var item = userDataAccess.GetByIdOrSlug(id);
             if (item == null)
             {
                 return NotFound();
             }
-            return item;
+            return Ok(item.toDTO());
         }
 
-        [HttpPost]
+        [HttpPost("Save")]
         public IActionResult Save([FromBody] User item)
         {
             userDataAccess.Save(item);
             return CreatedAtRoute("GetUser", new { id = item.Id }, item);
         }
 
-        //[HttpGet]
-        //public string Save(Skill )
-        //{
-        //    User user = new User()
-        //    {
-        //        Name = "Willian Steffen",
-        //        Username = "will",
-        //        Password = "1234",
-        //        Email = "willian.steffen@radixeng.com.br"
-        //    };
-        //    userDataAccess.Save(user);
-        //    return userDataAccess.test();
-        //}
+        [HttpPost("UpdateHours")]
+        public IActionResult UpdateHours([FromBody] UserHoursDTO dto)
+        {
+            bool ok = userDataAccess.UpdateHours(dto.UserId, dto.WorkedHours, dto.StudyHours);
+            if (ok)
+            {
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        public IActionResult AddSeconds([FromBody] UserHoursDTO dto)
+        {
+            bool ok = userDataAccess.UpdateHours(dto.UserId, dto.WorkedHours, dto.StudyHours);
+            if (ok)
+            {
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
     }
 }

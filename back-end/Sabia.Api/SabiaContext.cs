@@ -13,11 +13,19 @@ namespace Sabia.Api
     {
         public SabiaContext(DbContextOptions<SabiaContext> options) : base(options) { }
 
+        public DbSet<Course> Courses { get; set; }
+
+        public DbSet<CourseType> CourseTypes { get; set; }
+
+        public DbSet<CourseClass> CourseClasses { get; set; }
+
+        public DbSet<Job> Jobs { get; set; }
+
+        public DbSet<JobRequirement> JobsRequirements { get; set; }
+
         public DbSet<User> User { get; set; }
 
-        public DbSet<Skill> Skill { get; set; }
-
-        public DbSet<UserSkill> UserSkill { get; set; }
+        public DbSet<UserCourse> UserCourses { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -33,9 +41,7 @@ namespace Sabia.Api
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Skill>()
-                .HasIndex(u => u.Name)
-                .IsUnique();
+ 
         }
     }
 }

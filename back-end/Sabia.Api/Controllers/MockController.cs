@@ -25,17 +25,5 @@ namespace Sabia.Api.Controllers
             return "Server is Online";
         }
 
-        [HttpGet]
-        public string Get()
-        {
-            User user = new User()
-            {
-                Name = "Willian Steffen",
-                Username = "will",
-                Email = "willian.steffen@radixeng.com.br"
-            };
-            userDataAccess.Save(user);
-            return "";
-        }
     }
 }

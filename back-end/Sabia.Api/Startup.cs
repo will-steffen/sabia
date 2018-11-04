@@ -35,9 +35,13 @@ namespace Sabia.Api
                        .AllowAnyHeader();
             }));
 
-            services.AddScoped<SkillDataAccess>();
+            services.AddScoped<CourseDataAccess>();
+            services.AddScoped<CourseTypeDataAccess>();
+            services.AddScoped<CourseClassDataAccess>();
+            services.AddScoped<JobDataAccess>();
+            services.AddScoped<JobRequirementDataAccess>();
             services.AddScoped<UserDataAccess>();
-            services.AddScoped<UserSkillDataAccess>();
+            services.AddScoped<UserCourseDataAccess>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
