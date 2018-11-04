@@ -49,6 +49,7 @@ namespace Sabia.Api.DataAccess
             course.UsedUsedHours = UserCourse?.UsedHours ?? 0;
             course.UserProgression = UserCourse?.Progression ?? 0;
             course.UserCompleted = (UserCourse != null) ? UserCourse?.Progression >= 100 : false;
+            course.CourseAssigned = (UserCourse != null);
             if (course.RequiredCourseId.HasValue)
             {
                 course.UserMeetRequirement = (UserRequiredCourse != null) ? UserRequiredCourse.Progression >= 100 : false;
