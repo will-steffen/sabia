@@ -13,7 +13,7 @@ namespace Sabia.Api.DataAccess
 
         internal User GetByUsername(string username)
         {
-            return Context.Set<User>().Where(x => x.Name == username).FirstOrDefault();
+            return Context.Set<User>().Where(x => x.Username == username).FirstOrDefault();
         }
 
         internal User GetBySlug(string slug)
