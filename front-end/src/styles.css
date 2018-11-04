@@ -1,0 +1,373 @@
+/*Variables*/
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #efefef;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+}
+.container {
+  display: flex;
+  background: #043B57;
+}
+.container .left {
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 5%;
+}
+.container .left a {
+  color: #009dec;
+  cursor: pointer;
+}
+.container .left .description {
+  padding: 10px;
+}
+.container .left h2 {
+  color: #fff;
+  font-size: 30px;
+}
+.container .left .breadcrumb img {
+  width: 10px;
+  margin: 0 5px;
+}
+.lista {
+  margin: 0;
+  padding: 0;
+}
+.lista li {
+  list-style: none;
+  display: flex;
+  padding: 5px;
+}
+.lista li a {
+  display: flex;
+}
+.lista li a img {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+}
+.lista li a h5 {
+  align-self: center;
+  margin: 0 10px;
+}
+.lista li a b {
+  align-self: center;
+}
+.profile {
+  display: flex;
+}
+.profile .saldo-dinheiro,
+.profile .saldo-horas {
+  display: flex;
+  flex-direction: column;
+  color: #FFF;
+  align-self: center;
+  margin: 10px;
+}
+.profile .saldo-dinheiro label,
+.profile .saldo-horas label {
+  font-size: 12px;
+}
+.profile .saldo-dinheiro b,
+.profile .saldo-horas b {
+  font-size: 30px;
+}
+.profile a {
+  display: flex;
+  height: auto;
+  align-self: center;
+  transition: ease-in-out 0.5s;
+  cursor: pointer;
+  margin: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #fff;
+  font-size: 20px;
+}
+align .profile a:hover {
+  opacity: .5;
+}
+.profile a img {
+  height: 40px;
+  width: 40px;
+}
+.briefing {
+  width: 60%;
+  margin: 0 auto;
+}
+mat-panel-title {
+  flex: 1;
+}
+mat-expansion-panel-header {
+  border: 1px solid #cccccc;
+}
+.mat-chip-list-wrapper {
+  display: block!important;
+}
+header {
+  background: #2B8DBF;
+  display: flex;
+  justify-content: space-between;
+}
+header .menu {
+  display: flex;
+}
+header .menu .page-title {
+  display: flex;
+  transition: 0.3s;
+  cursor: pointer;
+}
+header .menu .page-title img {
+  width: 70px;
+  height: 70px;
+  margin: 7px;
+}
+header .menu .page-title h2 {
+  color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 35px;
+  align-self: center;
+  margin: 15px;
+}
+header .menu .page-title.selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+header .menu .page-title:hover {
+  box-shadow: inset 0px -5px #6ff8fd;
+}
+h2 {
+  margin: 15px 10px;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #717070;
+}
+mat-panel-description b {
+  font-size: 30px;
+  margin: 7px;
+}
+mat-panel-description span {
+  margin-top: 20px;
+}
+body {
+  background: #f3f3f3;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.main {
+  background: #4CB9E2;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+.footer {
+  padding: 2%;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer a {
+  margin: 10px;
+  cursor: pointer;
+}
+.footer a img {
+  width: 50px;
+}
+.footer a:hover {
+  opacity: .5;
+}
+.logo {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  padding: 1% 0;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.buttons {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.buttons div {
+  text-align: center;
+  background: #2B8DBF;
+  padding: 1%;
+  margin: 1%;
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 1px 1px 1px #00000014;
+  cursor: pointer;
+}
+.buttons div h1 {
+  color: #fff;
+}
+.buttons div img {
+  width: 60px;
+  height: auto;
+}
+.buttons div:hover {
+  background: #FFD98E;
+}
+.mat-menu-item {
+  background: #2B8DBF;
+  color: #fff;
+}
+.mat-menu-item img {
+  width: 20px;
+}
+.mat-icon-button {
+  background: transparent;
+}
+.mat-expansion-panel-body {
+  background: #eaeaea;
+}
+.jobs {
+  display: block;
+}
+.jobs .curso {
+  display: flex;
+  width: 100%;
+  max-width: unset;
+  margin-bottom: 10px;
+}
+.jobs .curso .nivel {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #2B8DBF;
+  padding: 10px;
+}
+.jobs .curso .nivel span {
+  padding: 10px;
+}
+.jobs .curso .rotulo {
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1;
+  background-image: url('assets/img/dummy.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.jobs .curso .rotulo .mat-raised-button.mat-primary {
+  font-size: 24px;
+  width: 60%;
+  margin: 8px auto;
+  padding: 8px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.jobs .curso .duracao {
+  z-index: 2;
+  display: flex;
+  background: #00000078;
+  padding: 15px;
+  font-size: 18px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 800;
+  color: #fff;
+}
+.jobs .curso .duracao img {
+  width: 20px;
+  height: 18px;
+}
+.jobs .curso .duracao span {
+  margin-right: 5px;
+  font-size: 23px;
+}
+.jobs .curso h3 {
+  display: block;
+  float: none;
+  padding: 10px;
+  margin: 0;
+  color: #4CB9E2;
+}
+.jobs .curso p {
+  padding: 10px;
+  width: 80%;
+  color: #6f6e6e;
+  line-height: 23px;
+}
+.jobs .curso .infos {
+  background: #fff;
+  padding: 0 35px;
+  flex: 2;
+}
+.lista-cursos {
+  display: flex;
+  overflow: auto;
+}
+.lista-cursos .curso {
+  box-shadow: 1px 1px 1px #00000057;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 20px 0 20px 0;
+  flex: 1;
+  max-width: 320px;
+  min-width: 300px;
+  margin: 10px;
+}
+.lista-cursos .curso:hover {
+  background: #2B8DBF;
+}
+.lista-cursos .curso:hover h3 {
+  color: #fff;
+}
+.lista-cursos .curso .avanco {
+  background: #efefef30;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 3px;
+  flex: 1;
+  height: 16px;
+}
+.lista-cursos .curso .avanco div {
+  height: 16px;
+  color: #fff;
+  width: 20%;
+  padding: 0 5px;
+}
+.lista-cursos .curso .avanco div.green {
+  background: #8dd072;
+}
+.lista-cursos .curso h3 {
+  color: #2B8DBF;
+  padding: 0 10px;
+  float: left;
+  margin: 10px;
+}
+.lista-cursos .curso .nivel {
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #2B8DBF;
+  padding: 10px;
+}
+.lista-cursos .curso .nivel span {
+  padding: 10px;
+}
+.lista-cursos .curso .rotulo img {
+  width: 100%;
+}
+.lista-cursos .curso .rotulo .duracao {
+  z-index: 2;
+  display: flex;
+  background: #2B8DBF;
+  padding: 5px;
+  font-size: 18px;
+  margin-top: -5px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 800;
+  color: #fff;
+}
+.lista-cursos .curso .rotulo .duracao img {
+  width: 20px;
+  height: 18px;
+}
+.lista-cursos .curso .rotulo .duracao span {
+  margin-right: 5px;
+  font-size: 23px;
+}

@@ -16,12 +16,33 @@ import { BlockUIModule } from 'ng-block-ui';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule } from '@angular/common/http';
 
+import { HomePage } from 'src/pages/private/home/home.page';
+import { CourseDetailPage } from 'src/pages/private/course-detail/course-detail.page';
+import { CoursesPage } from 'src/pages/private/courses/courses.page';
+import { JobDetailPage } from 'src/pages/private/job-detail/job-detail.page';
+import { JobsPage } from 'src/pages/private/jobs/jobs.page';
+import { AngularMaterialModule } from './material/angular-material.module';
+import { FaceViewComponent } from 'src/components/face-view/face-view.component';
+import { NavigationHeaderComponent } from 'src/components/navigation-header/navigation-header.component';
+import { PageDetailHeaderComponent } from 'src/components/page-detail-header/page-detail-header.component';
+import { CameraService } from 'src/services/camera.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
 
     LoginPage,
-    PrivateBasePage
+    PrivateBasePage,
+    HomePage,
+    JobsPage,
+    JobDetailPage,
+    CoursesPage,
+    CourseDetailPage,
+
+    FaceViewComponent,
+    NavigationHeaderComponent,
+    PageDetailHeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     BlockUIModule.forRoot(),
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    AngularMaterialModule  
   ],
   providers: [
     ServiceHandler,
@@ -38,7 +60,8 @@ import { HttpClientModule } from '@angular/common/http';
     AlertHandler,
 
     AuthService,
-    UserService
+    UserService,
+    CameraService
   ],
   bootstrap: [AppComponent]
 })

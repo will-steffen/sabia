@@ -1,0 +1,75 @@
+<app-navigation-header></app-navigation-header>
+
+<mat-accordion [multi]="true" >
+    <mat-expansion-panel [expanded]="'true'">
+        <mat-expansion-panel-header>
+        <mat-panel-title>
+            <h2>Meus Trabalhos</h2>
+        </mat-panel-title>
+        <mat-panel-description>
+            
+        </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="jobs">
+            <div class="curso">
+                <div class="rotulo">
+                    <div class="duracao">
+                        <img src="assets/img/clock.svg"/>
+                        <span>R$5,00/h</span>
+                    </div>
+                    <button mat-raised-button color="primary">Pegar Trabalho</button>
+                </div>
+            
+                <div class="infos">
+                    <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
+                    <div class="nivel">
+                        <mat-chip-list>
+                            <mat-chip color="primary" selected>Avançado</mat-chip>
+                            <mat-chip>HTML</mat-chip>
+                            <mat-chip>CSS</mat-chip>
+                            <mat-chip>JavaScript</mat-chip>
+                        </mat-chip-list>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>     
+                </div>  
+            </div>
+    
+        </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                            (closed)="panelOpenState = false" [expanded]="'true'">
+        <mat-expansion-panel-header>
+        <mat-panel-title>
+            <h2>Trabalhos Disponíveis</h2>
+        </mat-panel-title>
+        <mat-panel-description>
+            
+        </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="jobs">
+            <div class="curso">
+                <div class="rotulo">
+                    <div class="duracao">
+                        <img src="assets/img/clock.svg"/>
+                        <span>R$5,00/h</span>
+                    </div>
+                    <button mat-raised-button color="primary">Pegar Trabalho</button>
+                </div>
+            
+                <div class="infos">
+                    <h3>Jenkins em larga escala via Docker e Kubernetes</h3>
+                    <div class="nivel">
+                        <mat-chip-list>
+                            <mat-chip color="primary" selected>Avançado</mat-chip>
+                            <mat-chip>HTML</mat-chip>
+                            <mat-chip>CSS</mat-chip>
+                            <mat-chip>JavaScript</mat-chip>
+                        </mat-chip-list>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>     
+                </div>  
+            </div>
+
+        </div>
+    </mat-expansion-panel>
+</mat-accordion>

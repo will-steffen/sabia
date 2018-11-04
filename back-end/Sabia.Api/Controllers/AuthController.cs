@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Sabia.Api.DataAccess;
+using Sabia.Api.DTOs;
 using Sabia.Api.Model;
 
 namespace Sabia.Api.Controllers
@@ -20,14 +21,14 @@ namespace Sabia.Api.Controllers
         }
 
         [HttpPost]
-        public ActionResult<User> Login([FromBody] AuthData item)
+        public ActionResult<UserDTO> Login([FromBody] AuthData item)
         {         
-            var user = userDataAccess.GetByName(item.Name);
+            var user = userDataAccess.GetByUsername(item.Username);
             if (user == null)
             {
                 return NotFound();
             }
-            return user;
+            return user.toDTO();
         }
 
         //[HttpGet]

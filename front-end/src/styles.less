@@ -1,1 +1,400 @@
-/* You can add global styles to this file, and also import other style files */
+/*Variables*/
+@primary: #4CB9E2;
+@bluedark:#2B8DBF;
+@secondary: #FFD98E;
+@fonte: 'Roboto Condensed', sans-serif;
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+}
+
+::-webkit-scrollbar-track {
+background: #efefef;
+}
+
+::-webkit-scrollbar-thumb {
+background: #ccc; 
+}
+.container{
+    display: flex;
+    background: #043B57;
+    .left{
+        color: #fff;
+        font-family: @fonte;
+        padding: 5%;
+
+        a{
+            color: #009dec;
+            cursor: pointer
+        }
+        .description{
+            padding: 10px;
+        }
+        h2{
+            color: #fff;
+            font-size: 30px;
+            
+        }
+
+        .breadcrumb{
+            img{
+                width: 10px;
+                margin: 0 5px;
+            }
+        }
+    }
+}
+
+.lista{
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+        display: flex;
+        padding: 5px;
+        a{
+            display: flex;
+            img{
+                width: 30px;
+                height: 30px;
+                align-self: center;
+            }
+            h5{
+                align-self: center;
+                margin: 0 10px;
+            }
+            b{
+                align-self: center;
+            }
+        }
+    }
+}
+.profile{
+    display: flex;
+    .saldo-dinheiro, .saldo-horas{
+        display: flex;
+        flex-direction: column;
+        color: #FFF;
+        align-self: center;
+        margin: 10px;
+        label{
+            font-size: 12px; 
+        }
+        b{
+            font-size: 30px;
+        }
+    }
+    a{
+        display: flex;
+        align-self: center;
+        height: auto;
+        align-self: center;
+        transition: ease-in-out .5s;
+        cursor: pointer;
+        margin: 20px;
+        font-family: @fonte;
+        color: #fff;
+        font-size: 20px;
+        align
+        &:hover{
+            opacity: .5;
+        }
+        img{
+            height: 40px;
+            width: 40px;
+        }
+    }
+}
+.briefing{
+    width: 60%;
+    margin: 0 auto;
+}
+mat-panel-title{
+    flex: 1;
+}
+mat-expansion-panel-header{
+    border: 1px solid rgb(204, 204, 204);
+}
+.mat-chip-list-wrapper{
+    display: block!important;
+}
+header{
+    background: @bluedark;
+    display: flex;
+    justify-content: space-between;
+    .menu{
+        display: flex;
+        
+        .page-title {
+            display: flex;
+            transition: 0.3s;
+            cursor: pointer;
+
+            img{
+                width: 70px;
+                height: 70px;
+                margin: 7px;
+            }
+            h2{
+                color: #fff;
+                font-family: @fonte;
+                font-size: 35px; 
+                align-self: center;
+                margin: 15px;
+            }
+            &.selected{
+                background-color: rgba(0,0,0,0.1);
+            }
+            &:hover{
+                box-shadow: inset 0px -5px #6ff8fd;
+            }
+        }
+    }
+}
+h2{
+    margin: 15px 10px;
+    padding: 0;
+    font-family: @fonte;
+    color: #717070;
+}
+mat-panel-description{
+    b{
+        font-size: 30px;
+        margin: 7px;
+    }
+    span{
+        margin-top: 20px;
+    }
+    
+}
+body{
+    background: #f3f3f3;
+    font-family: @fonte;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.main{
+    background: @primary;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.footer{
+    display: flex;
+    padding: 2%;
+    display: flex;
+    justify-content: flex-end;
+    a{
+        margin: 10px;
+        cursor: pointer;
+        img{
+            width: 50px;
+        }
+        &:hover{
+            opacity: .5;
+        }
+    }
+}
+.logo{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 1% 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.buttons{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    div{
+        text-align: center;
+        background: #2B8DBF;
+        padding: 1%;
+        margin: 1%;
+        border-radius: 5px;
+        width: 200px;
+        height: 200px;
+        box-shadow: 1px 1px 1px #00000014;
+        cursor: pointer;
+        h1{
+            color: #fff;
+        }
+        img{
+            width: 60px;
+            height: auto;
+        }
+        &:hover{
+            background: @secondary;
+        }
+    }
+}
+.mat-menu-item{
+    background: @bluedark;
+    color: #fff;
+    img{
+        width: 20px;
+    }
+}
+.mat-icon-button{
+    background: transparent;
+}
+.mat-expansion-panel-body{
+    background: #eaeaea;
+}
+.jobs{
+    display: block;
+
+    .curso{
+        display: flex;
+        width: 100%;
+        max-width: unset;
+        margin-bottom: 10px;
+
+        .nivel{
+            font-family: @fonte;
+            color: @bluedark;
+            padding: 10px;
+            span{
+                padding: 10px;
+            }
+            
+        }
+        .rotulo{
+            background-repeat: no-repeat;
+            background-size: cover;
+            flex: 1;
+            background-image: url('assets/img/dummy.png');
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+           .mat-raised-button.mat-primary{
+                font-size: 24px;
+                width: 60%;
+                margin: 8px auto;
+                padding: 8px;
+                font-family: @fonte;
+            }
+        }
+        .duracao{
+            z-index: 2;
+            display: flex;
+            background: #00000078;
+            padding: 15px;
+            font-size: 18px;
+            font-family: @fonte;
+            font-weight: 800;
+            color: #fff;
+            img{
+                width: 20px;
+                height: 18px;
+            }
+            span{
+                margin-right: 5px;
+                font-size: 23px;
+            }
+        }
+
+        h3{
+            display: block;
+            float: none;
+            padding: 10px;
+            margin: 0;
+            color: @primary;
+        }
+        p{
+            padding: 10px;
+            width: 80%;
+            color: #6f6e6e;
+            line-height: 23px;
+        }
+
+        .infos{
+            background: #fff;
+            padding: 0 35px;
+            flex: 2;
+        }
+    } 
+
+}
+
+.lista-cursos{
+    display: flex;
+    overflow: auto;
+    .curso{
+        box-shadow: 1px 1px 1px #00000057;
+        cursor: pointer;
+        background: #fff;
+        border-radius: 20px 0 20px 0;
+        flex: 1;
+        max-width: 320px;
+        min-width: 300px;
+        margin: 10px;
+        &:hover{
+            background: @bluedark;
+            h3{
+                color: #fff;
+            }
+        }
+        .avanco{
+            background: #efefef30;
+            font-family: 'Roboto Condensed', sans-serif;
+            padding: 3px;
+            flex: 1;
+            height: 16px;
+            div{
+                height: 16px;
+                color: #fff;
+                width: 20%;
+                padding: 0 5px;
+                &.green{
+                    background: #8dd072;
+                }
+            }
+        }
+        h3{
+            color: @bluedark;
+            padding: 0 10px;
+            float: left;
+            margin: 10px;
+        }
+        .nivel{
+            font-family: @fonte;
+            color: @bluedark;
+            padding: 10px;
+            span{
+                padding: 10px;
+            }
+        }
+        .rotulo{
+            img{
+                width: 100%;
+            }
+            
+            .duracao{
+                z-index: 2;
+                display: flex;
+                background: @bluedark;
+                padding: 5px;
+                font-size: 18px;
+                margin-top: -5px;
+                font-family: @fonte;
+                font-weight: 800;
+                color: #fff;
+                img{
+                    width: 20px;
+                    height: 18px;
+                }
+                span{
+                    margin-right: 5px;
+                    font-size: 23px;
+                }
+            }
+        }
+    }
+}

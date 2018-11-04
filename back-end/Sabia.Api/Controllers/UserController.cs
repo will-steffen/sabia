@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Sabia.Api.DataAccess;
 using Sabia.Api.DTOs;
 using Sabia.Api.Model;
+using Sabia.Api.DTOs;
 
 namespace Sabia.Api.Controllers
 {
@@ -21,9 +22,9 @@ namespace Sabia.Api.Controllers
         }
 
         [HttpGet]
-        public ActionResult<List<User>> GetAll()
+        public ActionResult<List<UserDTO>> GetAll()
         {
-            return userDataAccess.List().ToList();
+            return userDataAccess.List().ToList().Select(x=>x.toDTO()).ToList();
         }
 
         [HttpGet("{id}", Name = "GetUser")]
