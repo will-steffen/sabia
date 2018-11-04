@@ -42,7 +42,6 @@ namespace Sabia.Api.DataAccess
             return JobDTO;
         }
 
-
         internal List<JobDTO> GetAll(string userId)
         {
             User user = userDataAccess.GetByIdOrSlug(userId);
