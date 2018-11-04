@@ -44,9 +44,6 @@ background: #ccc;
             }
         }
     }
-    .right{
-        
-    }
 }
 
 .lista{
@@ -116,25 +113,30 @@ header{
     justify-content: space-between;
     .menu{
         display: flex;
-        height: 70px;
-        padding: 10px;
-        transition: 0.3s;
-        cursor: pointer;
-        &.selected{
-            background-color: rgba(0,0,0,0.1);
-        }
-        &:hover{
-            box-shadow: inset 0px -5px #6ff8fd;
-        }
-        img{
-            width: 70px;
-        }
-        h2{
-            color: #fff;
-            font-family: @fonte;
-            font-size: 35px; 
-            align-self: center;
-            margin: 15px;
+        
+        .page-title {
+            display: flex;
+            transition: 0.3s;
+            cursor: pointer;
+
+            img{
+                width: 70px;
+                height: 70px;
+                margin: 7px;
+            }
+            h2{
+                color: #fff;
+                font-family: @fonte;
+                font-size: 35px; 
+                align-self: center;
+                margin: 15px;
+            }
+            &.selected{
+                background-color: rgba(0,0,0,0.1);
+            }
+            &:hover{
+                box-shadow: inset 0px -5px #6ff8fd;
+            }
         }
     }
 }
@@ -183,9 +185,6 @@ body{
     flex: 1;
     display: flex;
     justify-content: center;
-    img{
-        //width: 200px;
-    }
 }
 .buttons{
     flex: 1;
@@ -225,11 +224,12 @@ body{
 }
 .jobs{
     display: block;
-    background: #fff;
+
     .curso{
         display: flex;
         width: 100%;
         max-width: unset;
+        margin-bottom: 10px;
 
         .duracao{
             z-index: 2;
@@ -256,8 +256,13 @@ body{
             float: none;
             padding: 10px;
             margin: 0;
+        }
         p{
             padding: 10px;
+        }
+
+        .infos{
+            background: #fff;
         }
     } 
 
