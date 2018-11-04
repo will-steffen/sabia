@@ -10,13 +10,13 @@ export class JobService {
     constructor(
         private service: ServiceHandler,
         private userService: UserService
-    ){}
+    ) { }
 
-    getJobs() : Promise<Job[]>{
+    getJobs(): Promise<Job[]> {
         return new Promise((resolve, reject) => {
             let user = this.userService.getUser();
-            this.service.get(ApiRoute.job.base + '/' + user.id).then(data => {    
-                this.jobs = data.map(x => Job.fromData(x));            
+            this.service.get(ApiRoute.job.base + '/' + user.id).then(data => {
+                this.jobs = data.map(x => Job.fromData(x));
                 resolve(this.jobs);
             }).catch(err => {
                 reject(err);
@@ -24,11 +24,25 @@ export class JobService {
         });
     }
 
-    getJob(slug) : Promise<Job> {
+    getJob(slug): Promise<Job> {
         return new Promise((resolve, reject) => {
             let user = this.userService.getUser();
-            this.service.get(ApiRoute.job.base + '/' + slug + '/' + user.id).then(data => {           
+            this.service.get(ApiRoute.job.base + '/' + slug + '/' + user.id).then(data => {
                 resolve(Job.fromData(data));
+            }).catch(err => {
+                reject(err);
+            })
+        });
+    }
+
+    assign(job: Job): Promise<any> {
+        return new Promise((resolve, reject) => {
+            let user = this.userService.getUser();
+            this.service.post(ApiRoute.job.assign, {
+                UserId: user.id,
+                JobId: job.id
+            }).then(data => {
+                resolve();
             }).catch(err => {
                 reject(err);
             })

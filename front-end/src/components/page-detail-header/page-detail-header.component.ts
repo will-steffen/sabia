@@ -10,5 +10,14 @@ export class PageDetailHeaderComponent {
     @Input() title = "";
     @Input() description = "";
     @Input() actionButton = "";
-    @Input() onActionButton = () => {};
+    @Input() onActionButton = (ctx) => { };
+    @Input() actionContext;
+
+    callAction() {
+        if(this.actionContext){
+            this.onActionButton(this.actionContext)
+        }
+    }
+
+    
 }

@@ -18,7 +18,7 @@
                 <div class="rotulo">
                     <div class="duracao">
                         <img src="assets/img/clock.svg" />
-                        <span>R$ {{ toCurrency(job.reportedProgression) }}</span>
+                        <span>R$ {{ toCurrency(job.money) }}</span>
                     </div>
                     <!-- <button mat-raised-button color="primary">Pegar Trabalho</button> -->
                 </div>
@@ -57,9 +57,9 @@
                 <div class="rotulo">
                     <div class="duracao">
                         <img src="assets/img/clock.svg" />
-                        <span>R$ {{ toCurrency(job.reportedProgression) }}</span>
+                        <span>R$ {{ toCurrency(job.money) }}</span>
                     </div>
-                    <button mat-raised-button color="primary">Pegar Trabalho</button>
+                    <button mat-raised-button color="primary" (click)="assignJob(job)">Pegar Trabalho</button>
                 </div>
 
                 <div class="infos">

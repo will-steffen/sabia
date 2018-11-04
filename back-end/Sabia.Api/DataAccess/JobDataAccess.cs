@@ -95,7 +95,7 @@ namespace Sabia.Api.DataAccess
                 base.Save(job);
                 return true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return false;
             }

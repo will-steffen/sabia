@@ -15,7 +15,7 @@ export class Job extends BaseModel {
 
     usedHours: number;
     userDoingJob: boolean = false;
-    userId: number;
+    userId: string;
     verificationCode: string;
     yourUserDoing: boolean;
     requirements: JobRequirement[];

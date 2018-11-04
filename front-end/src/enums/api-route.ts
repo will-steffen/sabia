@@ -9,7 +9,8 @@ export const ApiRoute = {
         login: basePath + '/user/login'
     },
     job: {
-        base: basePath + '/job'
+        base: basePath + '/job',
+        assign: basePath + '/job/AttributeJob'
     },
     course:{
         base: basePath + '/course'
